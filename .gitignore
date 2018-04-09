@@ -1,0 +1,4 @@
+LOCAL
+
+node_modules
+*.env
