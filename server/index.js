@@ -4,9 +4,9 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import nunjucks from 'nunjucks';
 
-const app = express();
-
 import routes from './routes';
+
+const app = express();
 
 require('dotenv').config({ path: './vars.env' });
 
