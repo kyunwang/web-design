@@ -1,0 +1,19 @@
+{% macro newsItem(
+	title='',
+	author='',
+	url='',
+	image='',
+	publishedAt='',
+	source=''
+) %}
+
+	<article>
+		<p>{{ title }}</p>
+		<p>{{ author }}</p>
+		<p>{{ url }}</p>
+		<p>{{ image }}</p>
+		<p>{{ publishedAt }}</p>
+		<p>{{ source }}</p>
+	</article>
+
+{% endmacro %}
