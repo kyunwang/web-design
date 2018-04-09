@@ -4,11 +4,13 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import nunjucks from 'nunjucks';
 
-import routes from './routes';
+import helpers from './config/helpers';
+
+require('dotenv').config({ path: './vars.env' });
 
 const app = express();
 
-require('dotenv').config({ path: './vars.env' });
+import routes from './routes';
 
 // Setting the view engine
 app.set('view engine', 'html');
@@ -29,7 +31,7 @@ app.use(bodyParser.json())
 
 // Add global middleware available in templates and all routes
 app.use((req, res, next) => {
-	res.locals.h = 'Add helpers file here';
+	res.locals.h = helpers;
 	next();
 });
 
