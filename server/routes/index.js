@@ -1,8 +1,12 @@
 import express from 'express';
-import controller from '../controllers/controller';
+import newsController from '../controllers/newsController';
 
 const router = express.Router();
 
-router.get('/', controller.homePage);
+// Need to wrap in a error handler
+router.get('/',
+	newsController.getNews,
+	newsController.homePage
+);
 
 export default router;

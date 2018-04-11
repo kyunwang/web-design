@@ -1,6 +1,26 @@
 {% extends "base/layout.html" %}
 
+{% import "components/newsItem.html" as item %}
+
 {% block content %}
 	<h1>Homepage</h1>
 	<p>{{ message }}</p>
+
+	{% for article in headlines.articles %}
+		{{
+			item.newsItem(
+				title = article.title,
+				author = article.author,
+				url = article.url,
+				image = article.urlToImage,
+				publishedAt = article.publishedAt,
+				source = article.source.name
+			)
+		}}
+	
+	{% endfor %}
+
+	<pre>
+		{{ h.dump(headlines) }}
+	</pre>
 {% endblock %}
