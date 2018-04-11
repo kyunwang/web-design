@@ -14,19 +14,45 @@ const $$ = h.$$;
 
 (function() {
 	const bookmark = {
-		// toggleButton: '',
+		bookmarkLink: '',
 		init: function() {
-			$('#toggle-bookmark').addEventListener('click', () => {
-				console.log('toggle bookmarks');
-			});
+			this.bookmarkLink = $('#bookmark-link');
 
-			const bookmarks = $$('.bookmark').forEach(el => {
-				el.addEventListener('click', e => {
-					console.log('bookmark', e.target.id);
-					// console.log(e.getAttribute('id'));
-				});
-			});
+			this.bookmarkLink.addEventListener('click', this.updateBookmark);
+
+
+			console.log(this.bookmarkLink);
 			
+			const bookmarks = $$('.bookmark').forEach(this.addBookmark);
+		},
+		updateBookmark: function(el) {
+			el.preventDefault();
+			console.log('update');
+
+			
+		},
+		addBookmark: function(el) {
+			el.addEventListener('click', e => {
+				const id =  e.target.id;
+				fetch('/bookmark', {
+					method: 'POST',
+					body: JSON.stringify({
+						id: id
+					}),
+					headers: {"Content-Type": "application/json"},
+					credentials: 'same-origin' // or 'include'
+				})
+				.then(resp => resp.json())
+				.then(data => {
+					console.log(data);
+					
+					bookmark.bookmarkLink.textContent = data.bookmarks.length;
+				});
+
+				console.log('bookmark', e.target.id);
+				// console.log(e.getAttribute('id'));
+
+			});
 		}
 	}
 

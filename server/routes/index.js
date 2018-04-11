@@ -1,5 +1,6 @@
 import express from 'express';
 import newsController from '../controllers/newsController';
+import bookmarkController from '../controllers/bookmarkController';
 
 const router = express.Router();
 
@@ -12,6 +13,11 @@ router.get('/intro-3', newsController.introPage3);
 router.get('/',
 	newsController.getNews,
 	newsController.homePage
+);
+
+router.post('/bookmark',
+	bookmarkController.handleBookmark,
+	bookmarkController.updateBookmark
 );
 
 export default router;

@@ -6,7 +6,7 @@
 
 	<header>
 		<h3>{{ pageTitle.toUpperCase() }}</h3>
-		<button id="toggle-bookmark">X</button>
+		<a id="bookmark-link" href="/bookmarks">{{ bookmarks.length }}</a>
 	</header>
 
 	<main class="news--overview">
@@ -32,5 +32,7 @@
 	<pre>
 		{{ h.dump(headlines) }}
 	</pre>
+
+	<script src="./scripts/bundle.js"></script>
 
 {% endblock %}
