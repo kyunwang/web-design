@@ -7,17 +7,18 @@
 		publishedAt='',
 		source=''
 )%}
-
 <article class="news--item">
-	{% if image %}
-		<img src="{{ image }}" alt="">
-	{% endif %}
+	<a href="{{ url }}">
+		{% if image %}
+			<img src="{{ image }}" alt="">
+		{% endif %}
 
-	<p>{{ source }} {{ "-" if author }} {{ author }}</p>
-	<h3>{{ title }}</h3>
-	<!-- <p>{{ author }}</p> -->
-	<!-- <p>{{ url }}</p> -->
-	<!-- <p>{{ publishedAt }}</p> -->
+		<p>{{ source }} {{ "-" if author }} {{ author }}</p>
+		<h3>{{ title }}</h3>
+		<!-- <p>{{ author }}</p> -->
+		<!-- <p>{{ url }}</p> -->
+		<!-- <p>{{ publishedAt }}</p> -->
+	</a>
 </article>
 
 {% endmacro %}

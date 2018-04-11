@@ -40,6 +40,13 @@ p {
   margin: 0;
   padding: 0; }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: initial; }
+  a:visited {
+    color: initial; }
+
 /*==========================
 === Layout style - for body
 ===========================*/

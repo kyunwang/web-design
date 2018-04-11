@@ -44,7 +44,6 @@ body {
 		justify-content: space-between;
 		margin-bottom: 1.4em;
 
-
 		h3 {
 			color: var(--grey);
 			font-size: var(--s-text);
@@ -58,6 +57,15 @@ h3,
 p {
 	margin: 0;
 	padding: 0;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: initial;
+	&:visited {
+		color: initial;
+	}
 }
 
 /*==========================
