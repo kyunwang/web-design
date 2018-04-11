@@ -108,19 +108,25 @@ p {
   .intro--category input:active + label {
     color: var(--focus-color); }
 
-.intro--country ul {
-  display: flex;
-  overflow-x: scroll; }
-
-.intro--country li {
-  padding-right: 10em; }
-
-.intro--country p {
-  font-size: var(--m2-text);
-  color: var(--grey); }
-
-.intro--country label {
-  font-size: var(--l-text); }
+.intro--country {
+  margin: 0 -1.6rem; }
+  .intro--country ul {
+    display: flex;
+    overflow-x: scroll; }
+  .intro--country li {
+    padding-right: 10em; }
+  .intro--country p {
+    font-size: var(--m2-text);
+    color: var(--grey); }
+  .intro--country label {
+    font-size: var(--l-text); }
+  @supports (scroll-snap-type: x mandatory) {
+    .intro--country ul {
+      scroll-snap-type: x mandatory; }
+    .intro--country li {
+      scroll-snap-coordinate: 0% 0%;
+      scroll-snap-align: start;
+      padding-left: 1rem; } }
 
 .intro--category li {
   margin: 1rem 0; }
