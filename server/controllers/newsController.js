@@ -22,7 +22,7 @@ exports.homePage = (req, res) => {
 	// if () {}
 
 	res.render('homePage', {
-		message: 'Hello Server',
+		pageTitle: 'English news',
 		headlines: req.headline && req.headline
 	});
 }

@@ -3,24 +3,34 @@
 {% import "components/newsItem.html" as item %}
 
 {% block content %}
-	<h1>Homepage</h1>
-	<p>{{ message }}</p>
 
-	{% for article in headlines.articles %}
-		{{
-			item.newsItem(
-				title = article.title,
-				author = article.author,
-				url = article.url,
-				image = article.urlToImage,
-				publishedAt = article.publishedAt,
-				source = article.source.name
-			)
-		}}
-	
-	{% endfor %}
+	<header>
+		<h3 class="">{{ pageTitle.toUpperCase() }}</h3>
+		<button>X</button>
+	</header>
 
-	<pre>
+	<main class="news--overview">
+		<header>
+			<p>Technology</p>
+		</header>
+
+		{% for article in headlines.articles %}
+			{{
+				item.newsItem(
+					title = article.title,
+					author = article.author,
+					url = article.url,
+					image = article.urlToImage,
+					publishedAt = article.publishedAt,
+					source = article.source.name
+				)
+			}}
+		
+		{% endfor %}
+	</main>
+
+	<!-- <pre>
 		{{ h.dump(headlines) }}
-	</pre>
+	</pre> -->
+
 {% endblock %}

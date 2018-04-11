@@ -1,19 +1,23 @@
-{% macro newsItem(
-	title='',
-	author='',
-	url='',
-	image='',
-	publishedAt='',
-	source=''
-) %}
+{% macro 
+	newsItem(
+		title='',
+		author='',
+		url='',
+		image='',
+		publishedAt='',
+		source=''
+)%}
 
-	<article>
-		<p>{{ title }}</p>
-		<p>{{ author }}</p>
-		<p>{{ url }}</p>
-		<p>{{ image }}</p>
-		<p>{{ publishedAt }}</p>
-		<p>{{ source }}</p>
-	</article>
+<article class="news--item">
+	{% if image %}
+		<img src="{{ image }}" alt="">
+	{% endif %}
+
+	<p>{{ source }} {{ "-" if author }} {{ author }}</p>
+	<h3>{{ title }}</h3>
+	<!-- <p>{{ author }}</p> -->
+	<!-- <p>{{ url }}</p> -->
+	<!-- <p>{{ publishedAt }}</p> -->
+</article>
 
 {% endmacro %}

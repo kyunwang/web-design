@@ -1,7 +1,9 @@
 :root {
-	--body-font: "kano", arial, sans-serif;
-	--head-font: "hiragino kaku gothic std", arial, sans-serif;
-	
+	// Fonts
+	--primary-font: "hiragino kaku gothic std", tahoma, arial, sans-serif;
+	--sec-font: "kano", georgia, "times new roman", serif;
+
+	// Colors
 	--bg-color: #FFFDF8;
 	--focus-color: #4A90E2;
 
@@ -9,10 +11,15 @@
 	--light-grey: #F6F4EF;
 	--grey: #CDCCC9;
 
+	// Text sizes
+	--s-text: .8rem;
 	--m2-text: 1.5rem;
 	--m-text: 2rem;
 	--l-text: 3rem;
 	--xl-text: 5rem;
+
+	// Spaces
+	// --def-margin: 
 }
 
 * {
@@ -20,20 +27,46 @@
 }
 
 html, body {
+	position: relative;
 	height: 100%;
-	margin: 0;
+	font-family: var(--primary-font);
+	letter-spacing: 1.5px;
 	background: var(--bg-color);
-	font-family: var(--head-font);
+	overflow-x: hidden;
+	margin: 0;
 }
 
 body {
-	// padding: .5rem 1rem;
+	padding: .8rem 1.6rem;
+	
+	> header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1.4em;
+
+
+		h3 {
+			color: var(--grey);
+			font-size: var(--s-text);
+		}
+	}
 }
 
-ul {
+
+ul,
+h3,
+p {
 	margin: 0;
 	padding: 0;
 }
+
+/*==========================
+=== Layout style - for body
+===========================*/
+
+/*==========================
+=== Intro page styling
+===========================*/
 
 .progress--con {
 	pointer-events: none;
@@ -63,18 +96,19 @@ ul {
 	}
 
 	li {
-		font-family: var(--head-font);
+		font-family: var(--primary-font);
 		font-weight: 900;
 		list-style: none;
 	}
 
+	// Styling for the first page question (the name)
 	textarea {
-		max-width: 70%;
-		// border: 1px solid black;
-		border: 0;
+		max-width: 100%;
+		background-color: transparent;
 		font-size: var(--xl-text);
 		font-weight: 900;
 		text-transform: uppercase;
+		border: 0;
 	}
 	
 	a {
@@ -86,8 +120,8 @@ ul {
 	display: flex;
 	flex: 1;
 	align-items: center;
-	font-family: var(--body-font);
 	p {
+		font-family: var(--sec-font);
 		width: 60%;
 		font-size: var(--m-text);
 		font-weight: 300;
@@ -126,13 +160,12 @@ ul {
 	}
 
 	li {
-		margin-right: 10em;
+		padding-right: 10em;
 	}
 
 	p {
 		font-size: var(--m2-text);
 		color: var(--grey);
-		margin: 0;
 	}
 
 	label {
@@ -143,5 +176,56 @@ ul {
 .intro--category {
 	li {
 		margin: 1rem 0;
+	}
+}
+
+/*==========================
+=== News overview/list
+===========================*/
+
+.news--overview {
+	header {
+		p {
+			font-size: var(--m-text);
+		}
+	}
+}
+
+.news--item {
+	position: relative;
+
+	// &.no-image {
+	// 	&::before {
+	// 		content: "";
+	// 		height: 12px;
+	// 		width: 3px;
+	// 		background: var(--main-black);
+	// 		position: absolute;
+	// 		left: -4px;
+	// 	}
+	// }
+
+	&:first-of-type {
+		margin: 1.2rem 0 1rem 0;
+	}
+
+	&:not(:first-of-type) {
+		margin: 3.2rem 0 1rem 0;
+	}
+
+	h3 {
+		margin-top: .2em;
+	}
+	
+	p {
+		font-family: var(--sec-font);
+		letter-spacing: 1.5px;
+		margin-top: .6em;
+	}
+
+	img {
+		width: 100%;
+		border-radius: 3px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	}
 }
