@@ -5,8 +5,8 @@
 {% block content %}
 
 	<header>
-		<h3 class="">{{ pageTitle.toUpperCase() }}</h3>
-		<button>X</button>
+		<h3>{{ pageTitle.toUpperCase() }}</h3>
+		<button id="toggle-bookmark">X</button>
 	</header>
 
 	<main class="news--overview">
@@ -29,8 +29,8 @@
 		{% endfor %}
 	</main>
 
-	<!-- <pre>
+	<pre>
 		{{ h.dump(headlines) }}
-	</pre> -->
+	</pre>
 
 {% endblock %}
