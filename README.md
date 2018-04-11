@@ -1,3 +1,3 @@
-# Simple news app
-A simple news app using NewsApi for minor class Web Design
+# Simple news app (Quick prototype)
+A simple news app prototype using NewsApi for minor class Web Design
 
