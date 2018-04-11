@@ -37,10 +37,13 @@ html, body {
 }
 
 body {
-	padding: .5rem 1.6rem;
+	padding: .8rem 1.6rem;
 	
 	> header {
+		display: flex;
+		justify-content: space-between;
 		margin-bottom: 1.4em;
+
 
 		h3 {
 			color: var(--grey);
