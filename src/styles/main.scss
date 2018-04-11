@@ -154,6 +154,8 @@ p {
 }
 
 .intro--country {
+	margin: 0 -1.6rem;
+	
 	ul {
 		display: flex;
 		overflow-x: scroll;
@@ -170,6 +172,18 @@ p {
 
 	label {
 		font-size: var(--l-text);
+	}
+
+	@supports (scroll-snap-type: x mandatory) {
+		ul {
+			scroll-snap-type: x mandatory;
+		}
+
+		li {
+			scroll-snap-coordinate: 0% 0%;
+			scroll-snap-align: start;
+			padding-left: 1rem;
+		}
 	}
 }
 
@@ -193,17 +207,6 @@ p {
 
 .news--item {
 	position: relative;
-
-	// &.no-image {
-	// 	&::before {
-	// 		content: "";
-	// 		height: 12px;
-	// 		width: 3px;
-	// 		background: var(--main-black);
-	// 		position: absolute;
-	// 		left: -4px;
-	// 	}
-	// }
 
 	&:first-of-type {
 		margin: 1.2rem 0 1rem 0;
