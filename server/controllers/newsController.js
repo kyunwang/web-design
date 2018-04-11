@@ -18,8 +18,23 @@ exports.getNews = async (req, res, next) => {
 }
 
 exports.homePage = (req, res) => {
+	// If there is no selected news redirect to intro
+	// if () {}
+
 	res.render('homePage', {
 		message: 'Hello Server',
 		headlines: req.headline && req.headline
 	});
+}
+
+exports.introPage = (req, res) => {
+	res.render('introPage');
+}
+
+exports.introPage2 = (req, res) => {
+	res.render('introPage2');
+}
+
+exports.introPage3 = (req, res) => {
+	res.render('introPage3');
 }

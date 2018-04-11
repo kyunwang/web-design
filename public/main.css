@@ -1,0 +1,104 @@
+:root {
+  --body-font: "kano", arial, sans-serif;
+  --head-font: "hiragino kaku gothic std", arial, sans-serif;
+  --bg-color: #FFFDF8;
+  --focus-color: #4A90E2;
+  --main-black: #4A4A4A;
+  --light-grey: #F6F4EF;
+  --grey: #CDCCC9;
+  --m2-text: 1.5rem;
+  --m-text: 2rem;
+  --l-text: 3rem;
+  --xl-text: 5rem; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg-color);
+  font-family: var(--head-font); }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+.progress--con {
+  pointer-events: none;
+  position: fixed;
+  right: -1.5em;
+  font-size: var(--l-text); }
+  .progress--con li {
+    text-align: center;
+    color: var(--light-grey); }
+  .progress--con .current {
+    font-size: 6em; }
+
+.intro--page {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .intro--page form {
+    flex: 1;
+    z-index: 1; }
+  .intro--page li {
+    font-family: var(--head-font);
+    font-weight: 900;
+    list-style: none; }
+  .intro--page textarea {
+    max-width: 70%;
+    border: 0;
+    font-size: var(--xl-text);
+    font-weight: 900;
+    text-transform: uppercase; }
+  .intro--page a {
+    text-align: right; }
+
+.intro--question {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-family: var(--body-font); }
+  .intro--question p {
+    width: 60%;
+    font-size: var(--m-text);
+    font-weight: 300; }
+
+.intro--country li,
+.intro--category li {
+  font-family: var(---font-body);
+  font-weight: 900;
+  text-transform: uppercase; }
+
+.intro--country label,
+.intro--category label {
+  font-size: var(--m-text); }
+
+.intro--country input,
+.intro--category input {
+  position: absolute;
+  opacity: 0; }
+  .intro--country input:focus + label, .intro--country input:hover + label, .intro--country input:active + label,
+  .intro--category input:focus + label,
+  .intro--category input:hover + label,
+  .intro--category input:active + label {
+    color: var(--focus-color); }
+
+.intro--country ul {
+  display: flex;
+  overflow-x: scroll; }
+
+.intro--country li {
+  margin-right: 10em; }
+
+.intro--country p {
+  font-size: var(--m2-text);
+  color: var(--grey);
+  margin: 0; }
+
+.intro--country label {
+  font-size: var(--l-text); }
+
+.intro--category li {
+  margin: 1rem 0; }

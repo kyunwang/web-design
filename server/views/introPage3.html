@@ -1,0 +1,50 @@
+{% extends "base/layout.html" %}
+
+{% block content %}
+	<section class="intro--page">
+		<div class="intro--question">
+			<p>I want to read about</p>
+		</div>
+
+		<form class="intro--category">
+			<ul>
+				<li>
+					<input id="category-technology" type="radio" name="category" value="technology">
+					<label for="category-technology">Technology</label>
+				</li>
+				<li>
+					<input id="category-health" type="radio" name="category" value="health">
+					<label for="category-health">Health</label>
+				</li>
+				<li>
+					<input id="category-sports" type="radio" name="category" value="sports">
+					<label for="category-sports">Sports</label>
+				</li>
+				<li>
+					<input id="category-science" type="radio" name="category" value="science">
+					<label for="category-science">Science</label>
+				</li>
+				<li>
+					<input id="category-general" type="radio" name="category" value="general">
+					<label for="category-general">General</label>
+				</li>
+				<li>
+					<input id="category-business entertainment" type="radio" name="category" value="business entertainment">
+					<label for="category-business entertainment">Business entertainment</label>
+				</li>
+			</ul>
+		</form>
+
+		<a href="/intro-2">countries</a>
+		<a href="/">complete</a>
+
+		<div class="progress--con">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li class="current">3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	</section>
+{% endblock %}
