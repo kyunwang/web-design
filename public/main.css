@@ -1,11 +1,12 @@
 :root {
-  --body-font: "kano", arial, sans-serif;
-  --head-font: "hiragino kaku gothic std", arial, sans-serif;
+  --primary-font: "hiragino kaku gothic std", tahoma, arial, sans-serif;
+  --sec-font: "kano", georgia, "times new roman", serif;
   --bg-color: #FFFDF8;
   --focus-color: #4A90E2;
   --main-black: #4A4A4A;
   --light-grey: #F6F4EF;
   --grey: #CDCCC9;
+  --s-text: .8rem;
   --m2-text: 1.5rem;
   --m-text: 2rem;
   --l-text: 3rem;
@@ -15,15 +16,34 @@
   box-sizing: border-box; }
 
 html, body {
+  position: relative;
   height: 100%;
-  margin: 0;
+  font-family: var(--primary-font);
+  letter-spacing: 1.5px;
   background: var(--bg-color);
-  font-family: var(--head-font); }
+  overflow-x: hidden;
+  margin: 0; }
 
-ul {
+body {
+  padding: .5rem 1.6rem; }
+  body > header {
+    margin-bottom: 1.4em; }
+    body > header h3 {
+      color: var(--grey);
+      font-size: var(--s-text); }
+
+ul,
+h3,
+p {
   margin: 0;
   padding: 0; }
 
+/*==========================
+=== Layout style - for body
+===========================*/
+/*==========================
+=== Intro page styling
+===========================*/
 .progress--con {
   pointer-events: none;
   position: fixed;
@@ -43,24 +63,25 @@ ul {
     flex: 1;
     z-index: 1; }
   .intro--page li {
-    font-family: var(--head-font);
+    font-family: var(--primary-font);
     font-weight: 900;
     list-style: none; }
   .intro--page textarea {
-    max-width: 70%;
-    border: 0;
+    max-width: 100%;
+    background-color: transparent;
     font-size: var(--xl-text);
     font-weight: 900;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    border: 0; }
   .intro--page a {
     text-align: right; }
 
 .intro--question {
   display: flex;
   flex: 1;
-  align-items: center;
-  font-family: var(--body-font); }
+  align-items: center; }
   .intro--question p {
+    font-family: var(--sec-font);
     width: 60%;
     font-size: var(--m-text);
     font-weight: 300; }
@@ -90,15 +111,37 @@ ul {
   overflow-x: scroll; }
 
 .intro--country li {
-  margin-right: 10em; }
+  padding-right: 10em; }
 
 .intro--country p {
   font-size: var(--m2-text);
-  color: var(--grey);
-  margin: 0; }
+  color: var(--grey); }
 
 .intro--country label {
   font-size: var(--l-text); }
 
 .intro--category li {
   margin: 1rem 0; }
+
+/*==========================
+=== News overview/list
+===========================*/
+.news--overview header p {
+  font-size: var(--m-text); }
+
+.news--item {
+  position: relative; }
+  .news--item:first-of-type {
+    margin: 1.2rem 0 1rem 0; }
+  .news--item:not(:first-of-type) {
+    margin: 3.2rem 0 1rem 0; }
+  .news--item h3 {
+    margin-top: .2em; }
+  .news--item p {
+    font-family: var(--sec-font);
+    letter-spacing: 1.5px;
+    margin-top: .6em; }
+  .news--item img {
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
