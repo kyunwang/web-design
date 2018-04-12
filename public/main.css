@@ -26,8 +26,6 @@ html, body {
   margin: 0; }
 
 body {
-  max-width: 40rem;
-  margin: 0 auto;
   padding: .8rem 1.6rem; }
   body > header {
     display: flex;
