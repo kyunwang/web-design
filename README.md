@@ -9,8 +9,7 @@ With as goal to implement atleast three principles from this [article][article]
 # Table of Content
 - [Getting started](#getting-started)
 - [The Principles](#the-principles)
-- [Features](#features)
-- [Whats used](#whats-used)
+- [Current design](#current-design)
 - [To Do](#to-do)
 
 # Getting started
@@ -26,12 +25,18 @@ Here is how to get started:
 - A crucial moment: the zero state
 - One primary action per screen
 
-# Features
+# Current design
+This is the design from before the development
+![current_design](current_design.png)
 
+<!-- ## Zero state -->
+<!-- The first screen is a simple zero state for when the user has no articles yet bookmarked. -->
+<!-- This page will remind you that there is yet to be a article to be bookmarked. -->
 
 # To Do
 - [ ] Link the intro screen choices to the server
 - [ ] Fix the snapping in the country selection screen
+- [ ] Move the seperate *intro screens* to one with fixed scrolling per selection
 
 
 [article]: http://bokardo.com/principles-of-user-interface-design/
