@@ -26,6 +26,8 @@ html, body {
   margin: 0; }
 
 body {
+  max-width: 40rem;
+  margin: 0 auto;
   padding: .8rem 1.6rem; }
   body > header {
     display: flex;
@@ -52,8 +54,11 @@ button {
   pointer-events: pointer; }
 
 /*==========================
-=== Layout style - for body
+=== General
 ===========================*/
+.font--light {
+  font-family: var(--sec-font); }
+
 /*==========================
 === Intro page styling
 ===========================*/
@@ -160,6 +165,9 @@ button {
     font-family: var(--sec-font);
     letter-spacing: 1.5px;
     margin-top: .6em; }
+  .news--item a:focus img, .news--item a:hover img {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    transition: all .3s ease-in; }
   .news--item img {
     width: 100%;
     border-radius: 3px;
@@ -189,3 +197,6 @@ button {
 .bookmark--marked {
   border-left-color: var(--focus-color);
   border-right-color: var(--focus-color); }
+
+.cover-message a {
+  border-bottom: 2px solid var(--focus-color); }

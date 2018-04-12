@@ -38,7 +38,10 @@ html, body {
 	margin: 0;
 }
 
+
 body {
+	// max-width: 40rem;
+	// margin: 0 auto;
 	padding: .8rem 1.6rem;
 	
 	> header {
@@ -75,8 +78,19 @@ button {
 }
 
 /*==========================
-=== Layout style - for body
+=== General
 ===========================*/
+
+main {
+	// display: flex;
+	// flex-direction: column;
+	// height: 50%;
+}
+
+.font--light {
+	font-family: var(--sec-font);
+}
+
 
 /*==========================
 === Intro page styling
@@ -240,6 +254,16 @@ button {
 		margin-top: .6em;
 	}
 
+	a {
+		&:focus,
+		&:hover {
+			img {
+				box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+				transition: all .3s ease-in;
+			}
+		}
+	}
+
 	img {
 		width: 100%;
 		border-radius: 3px;
@@ -280,4 +304,13 @@ button {
 .bookmark--marked {
 	border-left-color: var(--focus-color);
 	border-right-color: var(--focus-color);
+}
+
+
+
+.cover-message {
+	// flex: 1;
+	a {
+		border-bottom: 2px solid var(--focus-color);
+	}
 }

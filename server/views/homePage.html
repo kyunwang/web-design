@@ -14,19 +14,30 @@
 			<p>Technology</p>
 		</header>
 
-		{% for article in articles %}
-			{{
-				item.newsItem(
-					title = article.title,
-					author = article.author,
-					url = article.url,
-					image = article.urlToImage,
-					publishedAt = article.publishedAt,
-					source = article.source.name
-				)
-			}}
-		
-		{% endfor %}
+		{% if articles.length %}
+			{% for article in articles %}
+				{{
+					item.newsItem(
+						title = article.title,
+						author = article.author,
+						url = article.url,
+						image = article.urlToImage,
+						publishedAt = article.publishedAt,
+						source = article.source.name
+					)
+				}}
+			{% endfor %}
+
+		{% else %}
+			<section class="cover-message">
+				<p class="font--light">You have no bookmarks yet. Let’s mark some!</p>
+				<a href="/">To news</a>
+			</section>
+
+		{% endif %}
+
+
+
 	</main>
 
 	<script src="./scripts/bundle.js"></script>
