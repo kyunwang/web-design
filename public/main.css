@@ -4,7 +4,7 @@
   --bg-color: #FFFDF8;
   --focus-color: #4A90E2;
   --main-black: #4A4A4A;
-  --light-grey: #F6F4EF;
+  --light-grey: #efefef;
   --grey: #CDCCC9;
   --s-text: .8rem;
   --m2-text: 1.5rem;
@@ -78,6 +78,10 @@ button {
   display: flex;
   flex-direction: column;
   height: 100%; }
+  .intro--page h3 {
+    display: inline-block;
+    color: var(--grey);
+    font-size: var(--s-text); }
   .intro--page form {
     flex: 1;
     z-index: 1; }
@@ -94,12 +98,23 @@ button {
     border: 0;
     resize: none; }
   .intro--page a {
-    text-align: right; }
+    display: inline-block;
+    color: var(--grey);
+    text-align: right;
+    z-index: 1;
+    border-bottom: 2px solid var(--focus-color);
+    position: relative; }
+    .intro--page a:last-of-type {
+      margin-left: auto; }
+  .intro--page nav {
+    display: flex;
+    justify-content: space-between; }
 
 .intro--question {
   display: flex;
   flex: 1;
-  align-items: center; }
+  flex-direction: column;
+  justify-content: center; }
   .intro--question p {
     font-family: var(--sec-font);
     width: 60%;
@@ -119,6 +134,7 @@ button {
 .intro--country input,
 .intro--category input {
   position: absolute;
+  left: -99999px;
   opacity: 0; }
   .intro--country input:focus + label, .intro--country input:hover + label, .intro--country input:active + label,
   .intro--category input:focus + label,
@@ -132,7 +148,7 @@ button {
     display: flex;
     overflow-x: scroll; }
   .intro--country li {
-    padding-right: 10em; }
+    padding-right: 22vw; }
   .intro--country p {
     font-size: var(--m2-text);
     color: var(--grey); }
@@ -158,9 +174,9 @@ button {
 .news--item {
   position: relative; }
   .news--item:first-of-type {
-    margin: 1.2rem 0 1rem 0; }
+    margin: 1.6rem 0 1rem 0; }
   .news--item:not(:first-of-type) {
-    margin: 3.2rem 0 1rem 0; }
+    margin: 4.2rem 0 1rem 0; }
   .news--item h3 {
     margin-top: .2em; }
   .news--item p {
@@ -195,6 +211,12 @@ button {
   border-right: 0.6rem solid var(--grey);
   border-bottom: .5rem solid transparent;
   border-radius: 3px; }
+
+#bookmark-link {
+  transition: var(--def-transition); }
+  #bookmark-link:hover, #bookmark-link:focus {
+    border-left-color: var(--focus-color);
+    border-right-color: var(--focus-color); }
 
 .bookmark--marked {
   border-left-color: var(--focus-color);

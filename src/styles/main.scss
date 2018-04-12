@@ -8,7 +8,7 @@
 	--focus-color: #4A90E2;
 
 	--main-black: #4A4A4A;
-	--light-grey: #F6F4EF;
+	--light-grey: #efefef;
 	--grey: #CDCCC9;
 
 	// Text sizes
@@ -125,6 +125,12 @@ main {
 	flex-direction: column;
 	height: 100%;
 
+	h3 {
+		display: inline-block;
+		color: var(--grey);
+		font-size: var(--s-text);
+	}
+
 	form {
 		flex: 1;
 		z-index: 1;
@@ -149,14 +155,30 @@ main {
 	}
 	
 	a {
+		display: inline-block;
+		// width: min-content;
+		color: var(--grey);
 		text-align: right;
+		z-index: 1;
+		border-bottom: 2px solid var(--focus-color);
+		position: relative;
+
+		&:last-of-type {
+			margin-left: auto;
+		}
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
 .intro--question {
 	display: flex;
 	flex: 1;
-	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 	p {
 		font-family: var(--sec-font);
 		width: 60%;
@@ -179,6 +201,7 @@ main {
 
 	input {
 		position: absolute;
+		left: -99999px;
 		opacity: 0;
 		&:focus,
 		&:hover,
@@ -199,7 +222,7 @@ main {
 	}
 
 	li {
-		padding-right: 10em;
+		padding-right: 22vw;
 	}
 
 	p {
@@ -246,11 +269,11 @@ main {
 	position: relative;
 
 	&:first-of-type {
-		margin: 1.2rem 0 1rem 0;
+		margin: 1.6rem 0 1rem 0;
 	}
 
 	&:not(:first-of-type) {
-		margin: 3.2rem 0 1rem 0;
+		margin: 4.2rem 0 1rem 0;
 	}
 
 	h3 {
@@ -307,6 +330,16 @@ main {
 	border-right: .6rem solid var(--grey); 
 	border-bottom: .5rem solid transparent;
 	border-radius: 3px;
+}
+
+#bookmark-link {
+	transition: var(--def-transition);
+	&:hover,
+	&:focus {
+		border-left-color: var(--focus-color); 
+		border-right-color: var(--focus-color);
+		// box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	} 
 }
 
 
