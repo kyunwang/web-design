@@ -46,7 +46,6 @@ app.use((req, res, next) => {
 	res.locals.h = helpers;
 	// Temporary storage for prototype
 	res.locals.news = req.session.news;
-	// res.locals.news = [];
 	res.locals.bookmarks = req.session.bookmarks;
 	next();
 });

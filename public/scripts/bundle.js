@@ -32,12 +32,12 @@ const $$ = h.$$;
 			
 		},
 		addBookmark: function(el) {
-			el.addEventListener('click', e => {
-				const id =  e.target.id;
+			el.addEventListener('click', elem => {
+				const target =  elem.target;
 				fetch('/bookmark', {
 					method: 'POST',
 					body: JSON.stringify({
-						id: id
+						id: elem.id
 					}),
 					headers: {"Content-Type": "application/json"},
 					credentials: 'same-origin' // or 'include'
@@ -45,11 +45,11 @@ const $$ = h.$$;
 				.then(resp => resp.json())
 				.then(data => {
 					console.log(data);
-					
+					el.classList.toggle('bookmark--marked');
 					bookmark.bookmarkLink.textContent = data.bookmarks.length;
 				});
 
-				console.log('bookmark', e.target.id);
+				// console.log('bookmark', el.target.id);
 				// console.log(e.getAttribute('id'));
 
 			});

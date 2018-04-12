@@ -31,6 +31,9 @@ exports.homePage = (req, res) => {
 	if (!req.session.bookmarks) {
 		req.session.bookmarks = [];
 	}
+	if (!req.session.news) {
+		req.session.news = [];
+	}
 
 	res.render('homePage', {
 		pageTitle: 'English news',

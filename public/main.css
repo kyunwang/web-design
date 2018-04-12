@@ -10,7 +10,8 @@
   --m2-text: 1.5rem;
   --m-text: 2rem;
   --l-text: 3rem;
-  --xl-text: 5rem; }
+  --xl-text: 5rem;
+  --def-transition: all .3s ease-in; }
 
 * {
   box-sizing: border-box; }
@@ -46,6 +47,9 @@ a {
   color: initial; }
   a:visited {
     color: initial; }
+
+button {
+  pointer-events: pointer; }
 
 /*==========================
 === Layout style - for body
@@ -163,4 +167,24 @@ a {
   .news--item button {
     position: absolute;
     top: 1em;
-    right: 1em; }
+    right: 1em;
+    border-radius: 3px;
+    transition: var(--def-transition); }
+    .news--item button:hover, .news--item button:focus {
+      border-left-color: var(--focus-color);
+      border-right-color: var(--focus-color); }
+
+.bookmark {
+  position: relative;
+  background: transparent;
+  height: 1.6rem;
+  width: .1rem;
+  padding: 0px;
+  border: none;
+  border-left: 0.6rem solid var(--grey);
+  border-right: 0.6rem solid var(--grey);
+  border-bottom: .5rem solid transparent; }
+
+.bookmark--marked {
+  border-left-color: var(--focus-color);
+  border-right-color: var(--focus-color); }
