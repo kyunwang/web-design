@@ -23,7 +23,6 @@ html, body {
   font-family: var(--primary-font);
   letter-spacing: 1.5px;
   background: var(--bg-color);
-  overflow: hidden;
   margin: 0; }
 
 body {
@@ -36,8 +35,10 @@ body {
       display: inline-block;
       color: var(--grey);
       font-size: var(--s-text); }
-    body > header div a {
-      margin-right: .6em; }
+    body > header div {
+      display: inline-block; }
+      body > header div a {
+        margin-right: .6em; }
 
 ul,
 h3,
@@ -203,7 +204,7 @@ button {
       border-left-color: var(--focus-color);
       border-right-color: var(--focus-color); }
 
-#bookmark-link,
+[href="/bookmarks"] + span,
 .bookmark {
   position: relative;
   background: transparent;
@@ -216,11 +217,14 @@ button {
   border-bottom: .5rem solid transparent;
   border-radius: 3px; }
 
-#bookmark-link {
-  transition: var(--def-transition); }
-  #bookmark-link:hover, #bookmark-link:focus {
-    border-left-color: var(--focus-color);
-    border-right-color: var(--focus-color); }
+[href="/bookmarks"] + span {
+  display: inline-block;
+  transition: var(--def-transition);
+  top: .5em; }
+
+[href="/bookmarks"]:hover + span, [href="/bookmarks"]:focus + span {
+  border-left-color: var(--focus-color);
+  border-right-color: var(--focus-color); }
 
 .bookmark--marked {
   border-left-color: var(--focus-color);

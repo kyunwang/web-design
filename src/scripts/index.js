@@ -7,7 +7,7 @@ const $$ = h.$$;
 	const bookmark = {
 		bookmarkLink: '',
 		init: function() {
-			this.bookmarkLink = $('#bookmark-link');
+			this.bookmarkLink = $('#bookmark-link a span');
 
 			// this.bookmarkLink.addEventListener('click', this.updateBookmark);
 

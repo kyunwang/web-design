@@ -11,7 +11,12 @@
 			{% endif %}
 			<h3>{{ pageTitle.toUpperCase() }}</h3>
 		</div>
-		<a id="bookmark-link" href="/bookmarks">{{ bookmarks.length }}</a>
+		<div id="bookmark-link">
+			<a href="/bookmarks">
+				my <span>{{ bookmarks.length }}</span>
+			</a>
+			<span></span>
+		</div>
 	</header>
 
 	<main class="news--overview">
