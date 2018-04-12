@@ -8,7 +8,11 @@
 		"watch": "npm run watch:css & npm run watch:js & npm start",
 		"watch:css": "node-sass --watch src/styles --output public/",
 		"watch:js": "watchify src/scripts/index.js --outfile public/scripts/bundle.js",
-		"build": "browserify src/scripts/index.js > dist/bundle.js && uglifyjs dist/bundle.js --compress --output dist/bundle.js"
+		"build": "npm run build:server",
+		"build:js": "browserify src/scripts/index.js > dist/bundle.js && uglifyjs dist/bundle.js --compress --output dist/bundle.js",
+		"build:server": "npm run clean && mkdir -p dist && babel server -s -D -d dist",
+		"clean": "rimraf dist",
+		"now-start": "node ./dist/index.js"
 	},
 	"keywords": [],
 	"author": "Kang Yun Wang(Kevin Wang)",
@@ -24,15 +28,29 @@
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-preset-env": "^1.6.1",
+		"babelify": "^8.0.0",
 		"browserify": "^16.2.0",
 		"node-sass": "^4.8.3",
 		"nodemon": "^1.17.3",
+		"rimraf": "^2.6.2",
 		"uglify": "^0.1.5",
 		"watchify": "^3.11.0"
 	},
 	"babel": {
 		"presets": [
-			"env"
+			[
+				"env",
+				{
+					"targets": {
+						"node": "current"
+					}
+				}
+			]
+		]
+	},
+	"browserify": {
+		"transform": [
+			"babelify"
 		]
 	}
 }
