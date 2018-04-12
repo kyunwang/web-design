@@ -174,7 +174,7 @@ button {
 === News overview/list
 ===========================*/
 .news--overview header p {
-  font-size: var(--m-text); }
+  font-size: var(--m2-text); }
 
 .news--item {
   position: relative; }

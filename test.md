@@ -6,6 +6,7 @@ This document includes the results of two tests.
 # Table of Content
 - [Test result](#test-result)
 - [Changes](#changes)
+- [Current screens](#current-screens)
 
 # Test result
 These are the problems testers encountered which are to be fixed:
@@ -27,3 +28,9 @@ The changes made following the tests:
 - A back button has been added to the bookmarks page/screen
 - Fixed a crash when selecting *Taiwan*
 - Increased the space between articles
+
+# Current screens
+
+![home](docImg-home.png)
+![intro form step1](docImg-intro1.png)
+![intro form step1](docImg-intro2.png)
