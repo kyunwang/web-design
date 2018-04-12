@@ -149,6 +149,8 @@ button {
   .intro--country ul {
     display: flex;
     overflow-x: scroll; }
+    .intro--country ul::-webkit-scrollbar {
+      display: none; }
   .intro--country li {
     padding-right: 22vw; }
   .intro--country p {
