@@ -15,7 +15,9 @@ router.get('/',
 	newsController.homePage
 );
 
-router.post('/bookmark',
+router.get('/bookmarks', bookmarkController.myBookmarks);
+
+router.post('/bookmarks',
 	bookmarkController.handleBookmark,
 	bookmarkController.updateBookmark
 );

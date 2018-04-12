@@ -14,7 +14,7 @@
 			<p>Technology</p>
 		</header>
 
-		{% for article in headlines.articles %}
+		{% for article in articles %}
 			{{
 				item.newsItem(
 					title = article.title,
@@ -28,10 +28,6 @@
 		
 		{% endfor %}
 	</main>
-
-	<pre>
-		{{ h.dump(headlines) }}
-	</pre>
 
 	<script src="./scripts/bundle.js"></script>
 

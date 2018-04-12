@@ -9,7 +9,7 @@ const $$ = h.$$;
 		init: function() {
 			this.bookmarkLink = $('#bookmark-link');
 
-			this.bookmarkLink.addEventListener('click', this.updateBookmark);
+			// this.bookmarkLink.addEventListener('click', this.updateBookmark);
 
 
 			console.log(this.bookmarkLink);
@@ -17,7 +17,7 @@ const $$ = h.$$;
 			const bookmarks = $$('.bookmark').forEach(this.addBookmark);
 		},
 		updateBookmark: function(el) {
-			el.preventDefault();
+			// el.preventDefault();
 			console.log('update');
 
 			
@@ -25,10 +25,11 @@ const $$ = h.$$;
 		addBookmark: function(el) {
 			el.addEventListener('click', elem => {
 				const target =  elem.target;
-				fetch('/bookmark', {
+				
+				fetch('/bookmarks', {
 					method: 'POST',
 					body: JSON.stringify({
-						id: elem.id
+						id: target.id
 					}),
 					headers: {"Content-Type": "application/json"},
 					credentials: 'same-origin' // or 'include'

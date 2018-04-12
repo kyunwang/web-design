@@ -250,7 +250,6 @@ button {
 		position: absolute;
 		top: 1em;
 		right: 1em;
-		border-radius: 3px;
 		transition: var(--def-transition);
 
 		&:hover,
@@ -262,20 +261,23 @@ button {
 	}
 }
 
+#bookmark-link,
 .bookmark {
 	position: relative; 
 	background: transparent;
 	height: 1.6rem; 
-	width: .1rem; 
+	width: .1rem;
 
 	padding: 0px; 
 	border: none;
 	border-left: .6rem solid var(--grey); 
 	border-right: .6rem solid var(--grey); 
 	border-bottom: .5rem solid transparent;
+	border-radius: 3px;
 }
 
+
 .bookmark--marked {
-	border-left-color: var(--focus-color); 
-	border-right-color: var(--focus-color); 
+	border-left-color: var(--focus-color);
+	border-right-color: var(--focus-color);
 }

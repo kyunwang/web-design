@@ -37,10 +37,13 @@ exports.homePage = (req, res) => {
 
 	res.render('homePage', {
 		pageTitle: 'English news',
-		headlines: req.session.news && req.session.news
-		// headlines: req.headline && req.headline
+		articles: req.session.news.articles && req.session.news.articles
 	});
 }
+
+/*==========================
+=== Intro pages / onboardingish
+===========================*/
 
 exports.introPage = (req, res) => {
 	res.render('introPage');

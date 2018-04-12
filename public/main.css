@@ -168,12 +168,12 @@ button {
     position: absolute;
     top: 1em;
     right: 1em;
-    border-radius: 3px;
     transition: var(--def-transition); }
     .news--item button:hover, .news--item button:focus {
       border-left-color: var(--focus-color);
       border-right-color: var(--focus-color); }
 
+#bookmark-link,
 .bookmark {
   position: relative;
   background: transparent;
@@ -183,7 +183,8 @@ button {
   border: none;
   border-left: 0.6rem solid var(--grey);
   border-right: 0.6rem solid var(--grey);
-  border-bottom: .5rem solid transparent; }
+  border-bottom: .5rem solid transparent;
+  border-radius: 3px; }
 
 .bookmark--marked {
   border-left-color: var(--focus-color);
