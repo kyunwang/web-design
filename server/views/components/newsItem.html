@@ -5,7 +5,8 @@
 		url='',
 		image='',
 		publishedAt='',
-		source=''
+		source='',
+		showBookmarks=false
 )%}
 <article class="news--item">
 	<a href="{{ url }}">
@@ -20,7 +21,9 @@
 		<!-- <p>{{ publishedAt }}</p> -->
 	</a>
 
-	<button id="item-{{ publishedAt }}" class="bookmark"></button>
+	{% if showBookmarks %}
+		<button id="item-{{ publishedAt }}" class="bookmark"></button>
+	{% endif %}
 </article>
 
 {% endmacro %}

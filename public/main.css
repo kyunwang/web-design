@@ -11,7 +11,8 @@
   --m-text: 2rem;
   --l-text: 3rem;
   --xl-text: 5rem;
-  --def-transition: all .3s ease-in; }
+  --def-transition: all .3s ease-in;
+  --def-transition-sel: .3s ease-in; }
 
 * {
   box-sizing: border-box; }
@@ -22,7 +23,7 @@ html, body {
   font-family: var(--primary-font);
   letter-spacing: 1.5px;
   background: var(--bg-color);
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0; }
 
 body {
@@ -103,7 +104,8 @@ button {
     text-align: right;
     z-index: 1;
     border-bottom: 2px solid var(--focus-color);
-    position: relative; }
+    position: relative;
+    transition: transform var(--def-transition-sel); }
     .intro--page a:last-of-type {
       margin-left: auto; }
   .intro--page nav {
