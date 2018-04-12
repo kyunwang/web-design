@@ -32,8 +32,11 @@ body {
     justify-content: space-between;
     margin-bottom: 1.4em; }
     body > header h3 {
+      display: inline-block;
       color: var(--grey);
       font-size: var(--s-text); }
+    body > header div a {
+      margin-right: .6em; }
 
 ul,
 h3,
@@ -88,7 +91,8 @@ button {
     font-size: var(--xl-text);
     font-weight: 900;
     text-transform: uppercase;
-    border: 0; }
+    border: 0;
+    resize: none; }
   .intro--page a {
     text-align: right; }
 

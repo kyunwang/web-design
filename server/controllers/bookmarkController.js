@@ -17,7 +17,9 @@ exports.updateBookmark = (req, res) => {
 
 exports.myBookmarks = (req, res) => {
 	res.render('homePage', {
-		pageTitle: 'My bookmarks',
+		pageTitle: 'English news',
+		header: 'My bookmarks',
+		backBtn: true,
 		articles: res.locals.bookmarks && res.locals.bookmarks
 	});
 }

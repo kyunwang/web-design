@@ -5,13 +5,18 @@
 {% block content %}
 
 	<header>
-		<h3>{{ pageTitle.toUpperCase() }}</h3>
+		<div>
+			{% if backBtn %}
+				<a href="/">return</a>
+			{% endif %}
+			<h3>{{ pageTitle.toUpperCase() }}</h3>
+		</div>
 		<a id="bookmark-link" href="/bookmarks">{{ bookmarks.length }}</a>
 	</header>
 
 	<main class="news--overview">
 		<header>
-			<p>Technology</p>
+			<p>{{ header }}</p>
 		</header>
 
 		{% if articles.length %}

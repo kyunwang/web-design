@@ -50,8 +50,15 @@ body {
 		margin-bottom: 1.4em;
 
 		h3 {
+			display: inline-block;
 			color: var(--grey);
 			font-size: var(--s-text);
+		}
+		div {
+
+			a {
+				margin-right: .6em;
+			}
 		}
 	}
 }
@@ -137,6 +144,8 @@ main {
 		font-weight: 900;
 		text-transform: uppercase;
 		border: 0;
+
+		resize: none;
 	}
 	
 	a {

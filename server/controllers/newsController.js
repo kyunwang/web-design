@@ -37,6 +37,7 @@ exports.homePage = (req, res) => {
 
 	res.render('homePage', {
 		pageTitle: 'English news',
+		header: 'Technology',
 		articles: req.session.news.articles && req.session.news.articles
 	});
 }
