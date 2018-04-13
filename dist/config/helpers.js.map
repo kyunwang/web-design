@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../server/config/helpers.js"],"names":["exports","dump","obj","JSON","stringify"],"mappings":";;AAAA;AACAA,QAAQC,IAAR,GAAeC,OAAOC,KAAKC,SAAL,CAAeF,GAAf,EAAoB,IAApB,EAA0B,CAA1B,CAAtB","file":"helpers.js","sourcesContent":["// To be able to 'log' our data in our template for debugging\nexports.dump = obj => JSON.stringify(obj, null, 2);"]}

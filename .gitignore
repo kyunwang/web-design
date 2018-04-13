@@ -2,5 +2,3 @@ LOCAL
 
 node_modules
 *.env
-
-dist

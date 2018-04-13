@@ -1,0 +1,42 @@
+
+{% extends "base/layout.html" %}
+
+{% block content %}
+	<section class="intro--page">
+		<div class="intro--question">
+			<p>I want my news to come from</p>
+		</div>
+		
+		<form class="intro--country">
+			<ul>
+				<li>
+					<p>English</p>
+					<input id="country-gb" type="radio" name="country" value="gb">
+					<label for="country-gb">Great Britain</label>
+				</li>
+				<li>
+					<p>Dutch</p>
+					<input id="country-nl" type="radio" name="country" value="nl">
+					<label for="country-nl">Netherlands</label>
+				</li>
+				<li>
+					<p>繁體</p>
+					<input id="country-tw" type="radio" name="country" value="tw">
+					<label for="country-tw">Taiwan</label>
+				</li>
+			</ul>
+		</form>
+		
+		<a href="/intro">name</a>
+		<a href="/intro-3">categories</a>
+			
+		<div class="progress--con">
+			<ul>
+				<li>1</li>
+				<li class="current">2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	</section>
+{% endblock %}

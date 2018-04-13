@@ -1,0 +1,26 @@
+{% macro 
+	newsItem(
+		title='',
+		author='',
+		url='',
+		image='',
+		publishedAt='',
+		source=''
+)%}
+<article class="news--item">
+	<a href="{{ url }}">
+		{% if image %}
+			<img src="{{ image }}" alt="">
+		{% endif %}
+
+		<p>{{ source }} {{ "-" if author }} {{ author }}</p>
+		<h3>{{ title }}</h3>
+		<!-- <p>{{ author }}</p> -->
+		<!-- <p>{{ url }}</p> -->
+		<!-- <p>{{ publishedAt }}</p> -->
+	</a>
+
+	<button id="item-{{ publishedAt }}" class="bookmark"></button>
+</article>
+
+{% endmacro %}
