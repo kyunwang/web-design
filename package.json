@@ -6,10 +6,10 @@
 	"scripts": {
 		"start": "node ./dist/index.js",
 		"dev": "nodemon --exec babel-node ./server/index.js --inspector",
-		"watch": "npm run watch:css & npm run watch:js & npm dev",
+		"watch": "npm run watch:css & npm run watch:js & npm run dev",
 		"watch:css": "node-sass --watch src/styles --output public/",
 		"watch:js": "watchify src/scripts/index.js --outfile public/scripts/bundle.js",
-		"build": "npm run build:server",
+		"build": "npm run build:js && npm run build:server",
 		"build:js": "browserify src/scripts/index.js > dist/bundle.js && uglifyjs dist/bundle.js --compress --output dist/bundle.js",
 		"build:server": "npm run clean && mkdir -p dist && babel server -s -D -d dist",
 		"clean": "rimraf dist",
