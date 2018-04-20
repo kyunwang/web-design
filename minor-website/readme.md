@@ -84,7 +84,7 @@ The ICT Student at HvA and CMD(The minor is hosted by CMD) student learn differe
 
 **Scenario:** The ICT student is looking for a Minor and is interested in the Minor Everything Web. He/She want to learn more about the contents and opinions of other students to form his/her own opinion before making his/her decision.
 
-**Goal:** Showcase the minor with content to instill curiousity for the potential student
+**Goal:** Showcase the minor with content to instill curiousity for the potential student. The student needs to be able to contact someone or sign in.
 
 
 [current]: https://cmda.github.io/minor-everything-web/
