@@ -73,7 +73,7 @@ From the case:
 
 This means that that the difference between the Dutch Sign Language and Dutch can be a barrier for understanding.
 
-**Scenario:** Marie want to learn about the Minor 
+**Scenario:** Marie want to learn about the Minor and without too much hassle. She doesn't want to get stuck with jargon.
 
 **Goal:** Deliver clear and consice content for Marie(and other Deaf) to show what this minor is all about.
 
