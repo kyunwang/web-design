@@ -84,12 +84,30 @@ header {
     margin: 0;
     padding: 1.5rem;
   }
+
+  & li {
+    &:first-of-type {
+      & a {
+        padding-left: 0;
+        padding-right: 1rem;
+      }
+    }
+    &:last-of-type {
+      & a {
+        padding-left: 1rem;
+        padding-right: 0;
+      }
+    }
+  }
+
   & a {
     display: inline-block;
     position: relative;
+    padding: 0 1rem;
     padding-bottom: 0.3rem;
     font-weight: var(--bold);
     overflow-y: hidden;
+
     &::after {
       content: "";
       position: absolute;
@@ -109,16 +127,11 @@ header {
         transform: translateY(0);
       }
     }
-    &:first-of-type,
-    &:last-of-type {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
   }
   & h2 {
     margin-top: 2rem;
     margin-left: -0.7rem;
-    margin-right: 1rem;
+    margin-right: 5%;
     font-size: 6rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -152,7 +165,14 @@ main {
       position: relative;
       font-size: 4rem;
       line-height: 0.9;
+      padding-left: 1rem;
       padding-bottom: 0.5rem; // z-index: 10;
+
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      /* -webkit-hyphens: auto; */
+      /* -moz-hyphens: auto; */
+      hyphens: auto;
       &::before {
         content: "";
         position: absolute;
@@ -214,6 +234,14 @@ main {
       & ul {
         padding-left: 10%;
       }
+
+      & h3 {
+        padding-left: 2.5rem;
+        &::before {
+          width: 14rem;
+        }
+      }
+
       & p {
         font-size: 1.3rem;
         max-width: 32em;
