@@ -32,7 +32,7 @@ Here is how to get started:
 
 # Current design
 This is the design from before the development
-![current_design](current_design.png)
+![current_design](docImg/current_design.png)
 
 ## Zero state
 The first screen is a simple zero state for when the user has no articles yet bookmarked.
