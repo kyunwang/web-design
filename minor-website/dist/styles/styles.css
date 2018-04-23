@@ -21,17 +21,23 @@ html {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 900;
 }
 
 p {
   font-weight: 300;
+  line-height: 1.4;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+li {
+  list-style: none;
 }
 
 body {
@@ -74,10 +80,6 @@ header ul {
   padding: 1.5rem;
 }
 
-header li {
-  list-style: none;
-}
-
 header a {
   font-weight: 900;
 }
@@ -101,6 +103,7 @@ header h2 {
 ===========================*/
 
 main section {
+  position: relative;
   padding: 0 1rem;
 }
 
@@ -125,7 +128,8 @@ main section h3::before {
 
 main section p {
   position: relative;
-  // color: blue;
+  font-size: 1.1rem;
+  // margin-left: 1rem;
 }
 
 main section p:first-of-type {
@@ -160,4 +164,67 @@ main section p button span {
   transform: rotate(180deg);
   text-align: center;
   text-orientation: sideways;
+}
+
+/*==========================
+=== Content block / Program
+===========================*/
+
+.program__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2.6rem;
+  width: 60vw;
+  max-width: 34rem;
+  height: 87%;
+  background: #fed631;
+  z-index: -10;
+}
+
+.program__container h3 {
+  margin-left: -1.5rem;
+  font-size: 4rem;
+}
+
+.program__container h3::before {
+  display: none;
+}
+
+.program__container h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.program__container p {
+  margin-left: 2rem;
+}
+
+.program__container p:first-of-type {
+  // margin: 1em 0;
+}
+
+.program__container p:first-of-type::before {
+  display: none;
+}
+
+.program__container a {
+  font-weight: 900;
+}
+
+.program__container:nth-of-type(even) {
+  //  background: red;
+}
+
+.program__container:nth-of-type(even)::before {
+  left: 30%;
+  // right: 2.6;
+}
+
+.program__container:nth-of-type(even) h3 {
+  margin-left: 20%;
+}
+
+.program__container:last-of-type {
+  margin-bottom: 4rem;
 }

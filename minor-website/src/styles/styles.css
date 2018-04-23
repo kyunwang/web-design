@@ -26,17 +26,23 @@ html {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   font-weight: var(--bold);
 }
 
 p {
   font-weight: var(--f-regular);
+  line-height: 1.4;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+li {
+  list-style: none;
 }
 
 body {
@@ -76,9 +82,6 @@ header {
     margin: 0;
     padding: 1.5rem;
   }
-  & li {
-    list-style: none;
-  }
   & a {
     font-weight: var(--bold);
   }
@@ -105,6 +108,7 @@ header {
 
 main {
   & section {
+    position: relative;
     padding: 0 1rem;
     & h3 {
       position: relative;
@@ -123,7 +127,9 @@ main {
       }
     }
     & p {
-      position: relative; // color: blue;
+      position: relative;
+      font-size: 1.1rem;
+      // margin-left: 1rem;
       &:first-of-type {
         //   color: red;
         margin-left: 2rem;
@@ -156,5 +162,65 @@ main {
         }
       }
     }
+  }
+}
+
+/*==========================
+=== Content block / Program
+===========================*/
+
+.program__container {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2.6rem;
+    width: 60vw;
+    max-width: 34rem;
+    height: 87%;
+    background: var(--yellow);
+    z-index: -10;
+  }
+  & h3 {
+    margin-left: -1.5rem;
+    font-size: 4rem;
+    &::before {
+      display: none;
+    }
+  }
+
+  & h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  & p {
+    margin-left: 2rem;
+    &:first-of-type {
+      // margin: 1em 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  & a {
+    font-weight: var(--bold);
+  }
+
+  &:nth-of-type(even) {
+    //  background: red;
+    &::before {
+      left: 30%;
+      // right: 2.6;
+    }
+
+    & h3 {
+      margin-left: 20%;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 4rem;
   }
 }
