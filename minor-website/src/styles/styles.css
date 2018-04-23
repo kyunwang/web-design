@@ -9,6 +9,8 @@
   --black: #000;
   --yellow: #fed631;
   /*  White spaces */
+
+  --def-transition: 0.3s ease-in;
 }
 
 html {
@@ -38,7 +40,7 @@ p {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
 li {
@@ -83,13 +85,41 @@ header {
     padding: 1.5rem;
   }
   & a {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.3rem;
     font-weight: var(--bold);
+    overflow-y: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 0.2rem;
+      width: 30%;
+      background: var(--black);
+      transform: translateY(0.3rem);
+      transition: transform var(--def-transition);
+    }
+    &:focus,
+    &:hover {
+      &::after {
+        transform: translateY(0);
+      }
+    }
+    &:first-of-type,
+    &:last-of-type {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
   & h2 {
     margin-top: 2rem;
     margin-left: -0.7rem;
     margin-right: 1rem;
-    font-size: 4.5rem;
+    font-size: 6rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     /* -webkit-hyphens: auto; */
@@ -102,6 +132,14 @@ header {
   min-height: 90vh;
 }
 
+@media all and (min-width: 40em) {
+  header {
+    & h2 {
+      font-size: 8rem;
+    }
+  }
+}
+
 /*==========================
 === Content block / Text
 ===========================*/
@@ -112,7 +150,7 @@ main {
     padding: 0 1rem;
     & h3 {
       position: relative;
-      font-size: 2.5rem;
+      font-size: 4rem;
       line-height: 0.9;
       padding-bottom: 0.5rem; // z-index: 10;
       &::before {
@@ -148,6 +186,8 @@ main {
         position: absolute;
         left: -2.4rem;
         bottom: 0;
+        height: 100%;
+        width: 1.3rem;
         color: var(--yellow);
         font-size: 1.2rem;
         background: transparent;
@@ -155,11 +195,28 @@ main {
         padding: 0;
         text-transform: uppercase;
         & span {
+          position: absolute;
+          left: 0;
+          bottom: 0;
           writing-mode: vertical-lr;
           transform: rotate(180deg);
           text-align: center;
           text-orientation: sideways;
         }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 40em) {
+  main {
+    & section {
+      & ul {
+        padding-left: 10%;
+      }
+      & p {
+        font-size: 1.3rem;
+        max-width: 32em;
       }
     }
   }
@@ -176,7 +233,7 @@ main {
     top: 0;
     left: 2.6rem;
     width: 60vw;
-    max-width: 34rem;
+    max-width: 28rem;
     height: 87%;
     background: var(--yellow);
     z-index: -10;
@@ -222,5 +279,43 @@ main {
 
   &:last-of-type {
     margin-bottom: 4rem;
+  }
+}
+
+@media all and (min-width: 40em) {
+  .program__container {
+    &::before {
+    }
+    & h3 {
+      margin-left: -2rem;
+      font-size: 6rem;
+    }
+
+    & h4 {
+      font-size: 3rem;
+    }
+
+    & p {
+      &:first-of-type {
+      }
+    }
+
+    &:nth-of-type(even) {
+      &::before {
+        left: 48%;
+        // right: 2.6;
+      }
+
+      & h3 {
+        margin-left: 40%;
+      }
+
+      & ul {
+        padding-left: 20%;
+      }
+    }
+
+    &:last-of-type {
+    }
   }
 }

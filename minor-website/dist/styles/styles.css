@@ -33,7 +33,7 @@ p {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 li {
@@ -81,14 +81,42 @@ header ul {
 }
 
 header a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.3rem;
   font-weight: 900;
+  overflow-y: hidden;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 0.2rem;
+  width: 30%;
+  background: #000;
+  transform: translateY(0.3rem);
+  transition: transform 0.3s ease-in;
+}
+
+header a:focus::after, header a:hover::after {
+  transform: translateY(0);
+}
+
+header a:first-of-type,
+    header a:last-of-type {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 header h2 {
   margin-top: 2rem;
   margin-left: -0.7rem;
   margin-right: 1rem;
-  font-size: 4.5rem;
+  font-size: 6rem;
   word-wrap: break-word;
   overflow-wrap: break-word;/* -webkit-hyphens: auto; *//* -moz-hyphens: auto; */
   hyphens: auto;
@@ -96,6 +124,12 @@ header h2 {
 
 .hero__container {
   min-height: 90vh;
+}
+
+@media all and (min-width: 40em) {
+  header h2 {
+    font-size: 8rem;
+  }
 }
 
 /*==========================
@@ -109,7 +143,7 @@ main section {
 
 main section h3 {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 4rem;
   line-height: 0.9;
   padding-bottom: 0.5rem;
   // z-index: 10;
@@ -151,6 +185,8 @@ main section p button {
   position: absolute;
   left: -2.4rem;
   bottom: 0;
+  height: 100%;
+  width: 1.3rem;
   color: #fed631;
   font-size: 1.2rem;
   background: transparent;
@@ -160,10 +196,23 @@ main section p button {
 }
 
 main section p button span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   text-align: center;
   text-orientation: sideways;
+}
+
+@media all and (min-width: 40em) {
+  main section ul {
+    padding-left: 10%;
+  }
+  main section p {
+    font-size: 1.3rem;
+    max-width: 32em;
+  }
 }
 
 /*==========================
@@ -176,7 +225,7 @@ main section p button span {
   top: 0;
   left: 2.6rem;
   width: 60vw;
-  max-width: 34rem;
+  max-width: 28rem;
   height: 87%;
   background: #fed631;
   z-index: -10;
@@ -227,4 +276,27 @@ main section p button span {
 
 .program__container:last-of-type {
   margin-bottom: 4rem;
+}
+
+@media all and (min-width: 40em) {
+  .program__container::before {}
+  .program__container h3 {
+    margin-left: -2rem;
+    font-size: 6rem;
+  }
+  .program__container h4 {
+    font-size: 3rem;
+  }
+  .program__container p:first-of-type {}
+  .program__container:nth-of-type(even)::before {
+    left: 48%;
+    // right: 2.6;
+  }
+  .program__container:nth-of-type(even) h3 {
+    margin-left: 40%;
+  }
+  .program__container:nth-of-type(even) ul {
+    padding-left: 20%;
+  }
+  .program__container:last-of-type {}
 }
