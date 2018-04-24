@@ -40,6 +40,10 @@ li {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   margin: 0;
   /* display: flex;
@@ -80,14 +84,20 @@ header ul {
   padding: 1.5rem;
 }
 
-header li:first-of-type a {
-  padding-left: 0;
-  padding-right: 1rem;
-}
-
-header li:last-of-type a {
-  padding-left: 1rem;
-  padding-right: 0;
+header {/* & li {
+    &:first-of-type {
+        & a {
+            padding-left: 0;
+            padding-right: 1rem;
+        }
+    }
+    &:last-of-type {
+        & a {
+            padding-left: 1rem;
+            padding-right: 0;
+        }
+    }
+} */
 }
 
 header a {
@@ -121,6 +131,7 @@ header h2 {
   margin-top: 2rem;
   margin-left: -0.7rem;
   margin-right: 5%;
+  padding-bottom: 3rem;
   font-size: 6rem;
   word-wrap: break-word;
   overflow-wrap: break-word;/* -webkit-hyphens: auto; *//* -moz-hyphens: auto; */
@@ -175,12 +186,12 @@ main section p {
   // margin-left: 1rem;
 }
 
-main section p:first-of-type {
+main section > p:first-of-type {
   //   color: red;
   margin-left: 2rem;
 }
 
-main section p:first-of-type::before {
+main section > p:first-of-type::before {
   content: "";
   position: absolute;
   left: -1rem;
@@ -190,7 +201,7 @@ main section p:first-of-type::before {
   background: #fed631;
 }
 
-main section p button {
+main section > p button {
   position: absolute;
   left: -2.4rem;
   bottom: 0;
@@ -204,7 +215,8 @@ main section p button {
   text-transform: uppercase;
 }
 
-main section p button span {
+main section > p button span {
+  font-weight: 900;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -215,6 +227,15 @@ main section p button span {
 }
 
 @media all and (min-width: 40em) {
+  main section img {
+    display: block;
+    max-width: 60%;
+    max-height: 24rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding-right: 2rem;
+  }
   main section ul {
     padding-left: 10%;
   }
@@ -227,6 +248,20 @@ main section p button span {
   main section p {
     font-size: 1.3rem;
     max-width: 32em;
+  }
+  main aside {
+    display: flex;
+    margin-top: 1rem;
+    transform: translateX(-5rem);
+    width: calc(100% + 5rem);
+  }
+  main aside img {
+    align-self: flex-start;
+    //   transform: translateX(-10rem);
+  }
+  main aside p {
+    margin: 0;
+    //   transform: translateX(-10rem);
   }
 }
 
@@ -264,11 +299,11 @@ main section p button span {
   margin-left: 2rem;
 }
 
-.program__container p:first-of-type {
+.program__container > p:first-of-type {
   // margin: 1em 0;
 }
 
-.program__container p:first-of-type::before {
+.program__container > p:first-of-type::before {
   display: none;
 }
 
@@ -308,7 +343,7 @@ main section p button span {
     // right: 2.6;
   }
   .program__container:nth-of-type(even) h3 {
-    margin-left: 40%;
+    margin-left: 30%;
   }
   .program__container:nth-of-type(even) ul {
     padding-left: 20%;
