@@ -26,9 +26,11 @@ h4 {
   font-weight: 900;
 }
 
-p {
+p,
+li,
+blockquote {
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 a {
@@ -149,7 +151,7 @@ header h2 {
 }
 
 /*==========================
-=== Content block / Text
+=== Content block / Text (Default)
 ===========================*/
 
 main section {
@@ -266,6 +268,104 @@ main section > p button span {
 }
 
 /*==========================
+=== Testimonials
+===========================*/
+
+.testimonials__container {
+  padding: 0
+}
+
+.testimonials__container h3 {
+  padding: 0 3.5rem;
+}
+
+.testimonials__container form {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: 4rem;
+  width: 100%;
+  min-height: 12rem;
+  overflow-x: auto;
+  //  overflow-y: visible;
+  //  word-wrap: unset;
+}
+
+.testimonials__container [type="radio"] {
+  position: absolute;
+  left: -300%;
+}
+
+.testimonials__container [type="radio"] + label {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 40%;
+  padding: 1rem;
+  transition: background 0.3s ease-in;
+}
+
+.testimonials__container [type="radio"] + label::before {
+  content: "selecteer";
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  font-size: 0.8rem;
+  //   height: 3rem;
+  width: max-content;
+  background: #000;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+.testimonials__container [type="radio"] + label:hover,
+      .testimonials__container [type="radio"] + label:focus {
+  background: #fed631;
+}
+
+.testimonials__container [type="radio"]:checked + label {
+  background: #fed631;
+}
+
+.testimonials__container ul {
+  padding: 1rem;
+  font-weight: 300;
+}
+
+.testimonials__container blockquote {
+  font-size: 1.1rem;
+  margin: 0;
+  margin-bottom: 2.5rem;
+}
+
+.testimonials__container li {
+  position: relative;
+}
+
+.testimonials__container .icon__quote {
+  position: absolute;
+  width: 4rem;
+  z-index: -10;
+  transform: translate(-25%, -30%);
+}
+
+@media all and (min-width: 40em) {
+  .testimonials__container form {
+    font-size: 1.3rem;
+  }
+  .testimonials__container [type="radio"] + label {
+    flex-basis: 30%;
+  }
+  .testimonials__container [type="radio"]:checked + label {}
+  .testimonials__container blockquote {
+    max-width: 32em;
+    font-size: 1.3rem;
+  }
+}
+
+/*==========================
 === Content block / Program
 ===========================*/
 
@@ -349,4 +449,12 @@ main section > p button span {
     padding-left: 20%;
   }
   .program__container:last-of-type {}
+}
+
+/*==========================
+=== Other
+===========================*/
+
+.icon__quote {
+  fill: #fed631;
 }
