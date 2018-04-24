@@ -478,3 +478,7 @@ main {
 .icon__quote {
   fill: var(--yellow);
 }
+
+.hide {
+	display: none;
+}

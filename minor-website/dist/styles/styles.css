@@ -458,3 +458,7 @@ main section > p button span {
 .icon__quote {
   fill: #fed631;
 }
+
+.hide {
+	display: none;
+}
