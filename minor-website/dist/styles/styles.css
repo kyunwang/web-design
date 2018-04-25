@@ -99,22 +99,6 @@ header ul {
     padding: 1.5rem;
 }
 
-header {/* & li {
-    &:first-of-type {
-        & a {
-            padding-left: 0;
-            padding-right: 1rem;
-        }
-    }
-    &:last-of-type {
-        & a {
-            padding-left: 1rem;
-            padding-right: 0;
-        }
-    }
-} */
-}
-
 header a {
     display: inline-block;
     position: relative;
@@ -157,9 +141,20 @@ header h2 {
     min-height: 90vh;
 }
 
+.header__icon--surveillance {
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    width: 20vw;
+}
+
 @media all and (min-width: 40em) {
     header h2 {
         font-size: 8rem;
+    }
+    .header__icon--surveillance {
+        top: 2rem;
+        width: 12rem;
     }
 }
 
@@ -246,6 +241,9 @@ main section aside p:not(:first-of-type) {
 }
 
 @media all and (min-width: 40em) {
+    main section {
+        overflow-x: hidden;
+    }
     main section img {
         display: block;
         max-width: 60%;
