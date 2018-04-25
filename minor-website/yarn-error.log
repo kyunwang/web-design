@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/wky/.nvm/versions/node/v9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js run watch:css
+  /Users/wky/.nvm/versions/node/v9.8.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js build
 
 PATH: 
-  /Users/wky/Cloud/stack/School/Minor/web-design/minor-website/node_modules/.bin:/Users/wky/.config/yarn/link/node_modules/.bin:/Users/wky/Cloud/stack/School/Minor/web-design/minor-website/node_modules/.bin:/Users/wky/.config/yarn/link/node_modules/.bin:/Users/wky/.nvm/versions/node/v9.8.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/wky/.nvm/versions/node/v9.8.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/wky/.nvm/versions/node/v9.8.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/wky/.rvm/gems/ruby-2.4.0/bin:/Users/wky/.rvm/gems/ruby-2.4.0@global/bin:/Users/wky/.rvm/rubies/ruby-2.4.0/bin:/Users/wky/.yarn/bin:/Users/wky/.nvm/versions/node/v9.8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:/Users/wky/.rvm/bin
+  /Users/wky/.rvm/gems/ruby-2.4.0/bin:/Users/wky/.rvm/gems/ruby-2.4.0@global/bin:/Users/wky/.rvm/rubies/ruby-2.4.0/bin:/Users/wky/.yarn/bin:/Users/wky/.nvm/versions/node/v9.8.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:/Users/wky/.rvm/gems/ruby-2.4.0/bin:/Users/wky/.rvm/gems/ruby-2.4.0@global/bin:/Users/wky/.rvm/rubies/ruby-2.4.0/bin:/Users/wky/.yarn/bin:/Users/wky/.rvm/bin
 
 Yarn version: 
   1.5.1
@@ -15,58 +15,54 @@ Platform:
 
 npm manifest: 
   {
-    "name": "web-design",
-    "description": "",
-    "license": "MIT",
-    "scripts": {
-      "build":
-        "parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' 'yarn run copy:fonts' 'yarn run copy' && yarn run build:js",
-      "start": "yarn run dev",
-      "dev":
-        "parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch:js' 'yarn run watch:css' 'yarn run copy:fonts' 'yarn run watch:fonts' 'yarn run serve'  'yarn run copy' 'yarn run watch:img' 'yarn run watch:html' ",
-      "clean": "rimraf ./dist/*",
-      "copy": "copyfiles -u 1 ./src/img/**/** ./dist",
-      "copy:fonts": "copyfiles -u 1 ./src/fonts/**/** ./dist",
-      "build:html": "htmlprocessor ./src/*.html -o './dist/'",
-      "build:js":
-        "browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
-      "build:css":
-        "postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
-      "watch:img": "onchange './src/img/*'  './src/img/**/**' -- yarn run copy",
-      "watch:js": "watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
-      "watch:css":
-        "postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w",
-      "watch:html": "onchange './src/*.html' -- yarn run build:html",
-      "watch:fonts": "onchange './src/fonts/*' -- yarn run copy:fonts",
-      "serve":
-        "browser-sync start --server -f './dist/*.html' './dist/styles/*' './dist/**/*' --ss ./dist --index ./dist/progamma.html"
-    },
-    "devDependencies": {
-      "babel-core": "^6.26.0",
-      "babel-plugin-transform-async-to-generator": "^6.24.1",
-      "babel-plugin-transform-runtime": "^6.23.0",
-      "babel-preset-env": "^1.6.1",
-      "babelify": "^8.0.0",
-      "browser-sync": "^2.23.6",
-      "browserify": "^16.1.1",
-      "copyfiles": "^2.0.0",
-      "cssnano": "^3.10.0",
-      "htmlprocessor": "^0.2.6",
-      "onchange": "^3.3.0",
-      "parallelshell": "^3.0.2",
-      "postcss-cli": "^5.0.0",
-      "postcss-cssnext": "^3.1.0",
-      "postcss-custom-media": "^6.0.0",
-      "postcss-discard-comments": "^2.0.4",
-      "postcss-import": "^11.1.0",
-      "postcss-modules": "^1.1.0",
-      "postcss-nesting": "^4.2.1",
-      "postcss-uncss": "^0.16.1",
-      "rimraf": "^2.6.2",
-      "uncss": "^0.16.2",
-      "watchify": "^3.11.0"
-    },
-    "dependencies": {}
+  	"name": "web-design",
+  	"description": "",
+  	"license": "MIT",
+  	"scripts": {
+  		"build": "parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' 'yarn run copy:fonts' 'yarn run copy' && yarn run build:js",
+  		"start": "yarn run dev",
+  		"dev": "parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run watch:js' 'yarn run watch:css' 'yarn run copy:fonts' 'yarn run watch:fonts' 'yarn run serve'  'yarn run copy' 'yarn run watch:img' 'yarn run watch:html' ",
+  		"clean": "rimraf ./dist/*",
+  		"copy": "copyfiles -u 1 ./src/img/**/** ./dist",
+  		"copy:fonts": "copyfiles -u 1 ./src/fonts/**/** ./dist",
+  		"build:html": "htmlprocessor ./src/*.html -o './dist/'",
+  		"build:js": "browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
+  		"build:css": "postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
+  		"watch:img": "onchange './src/img/*'  './src/img/**/**' -- yarn run copy",
+  		"watch:js": "watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
+  		"watch:css": "postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w",
+  		"watch:html": "onchange './src/*.html' -- yarn run build:html",
+  		"watch:fonts": "onchange './src/fonts/*' -- yarn run copy:fonts",
+  		"serve": "browser-sync start --server -f './dist/*.html' './dist/styles/*' './dist/**/*' --ss ./dist --index ./dist/index.html"
+  	},
+  	"devDependencies": {
+  		"babel-core": "^6.26.0",
+  		"babel-plugin-transform-async-to-generator": "^6.24.1",
+  		"babel-plugin-transform-runtime": "^6.23.0",
+  		"babel-preset-env": "^1.6.1",
+  		"babelify": "^8.0.0",
+  		"browser-sync": "^2.23.6",
+  		"browserify": "^16.1.1",
+  		"copyfiles": "^2.0.0",
+  		"cssnano": "^3.10.0",
+  		"htmlprocessor": "^0.2.6",
+  		"onchange": "^3.3.0",
+  		"parallelshell": "^3.0.2",
+  		"postcss-cli": "^5.0.0",
+  		"postcss-cssnext": "^3.1.0",
+  		"postcss-custom-media": "^6.0.0",
+  		"postcss-discard-comments": "^2.0.4",
+  		"postcss-import": "^11.1.0",
+  		"postcss-modules": "^1.1.0",
+  		"postcss-nesting": "^4.2.1",
+  		"postcss-uncss": "^0.16.1",
+  		"prettier": "^1.12.1",
+  		"rimraf": "^2.6.2",
+  		"uglify-js": "^3.3.22",
+  		"uncss": "^0.16.2",
+  		"watchify": "^3.11.0"
+  	},
+  	"dependencies": {}
   }
 
 yarn manifest: 
@@ -1405,7 +1401,7 @@ Lockfile:
     dependencies:
       delayed-stream "~1.0.0"
   
-  commander@^2.2.0, commander@^2.9.0:
+  commander@^2.2.0, commander@^2.9.0, commander@~2.15.0:
     version "2.15.1"
     resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
   
@@ -4318,6 +4314,10 @@ Lockfile:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   
+  prettier@^1.12.1:
+    version "1.12.1"
+    resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.12.1.tgz#c1ad20e803e7749faf905a409d2367e06bbe7325"
+  
   pretty-hrtime@^1.0.3:
     version "1.0.3"
     resolved "https://registry.yarnpkg.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
@@ -5302,6 +5302,13 @@ Lockfile:
     version "0.7.12"
     resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
   
+  uglify-js@^3.3.22:
+    version "3.3.22"
+    resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.3.22.tgz#e5f0e50ddd386b7e35b728b51600bf7a7ad0b0dc"
+    dependencies:
+      commander "~2.15.0"
+      source-map "~0.6.1"
+  
   uid-number@^0.0.6:
     version "0.0.6"
     resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
@@ -5632,7 +5639,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w
+  Arguments: -c parallelshell 'yarn run clean' 'yarn run build:html' 'yarn run build:css' 'yarn run copy:fonts' 'yarn run copy' && yarn run build:js
   Directory: /Users/wky/Cloud/stack/School/Minor/web-design/minor-website
   Output:
   

@@ -45,10 +45,15 @@
 		"postcss-modules": "^1.1.0",
 		"postcss-nesting": "^4.2.1",
 		"postcss-uncss": "^0.16.1",
-		"prettier": "1.12.1",
+		"prettier": "^1.12.1",
 		"rimraf": "^2.6.2",
+		"uglify-js": "^3.3.22",
 		"uncss": "^0.16.2",
 		"watchify": "^3.11.0"
 	},
-	"dependencies": {}
+	"dependencies": {},
+	"babel": {
+		"presets": "env",
+		"plugins": ["transform-async-to-generator", "transform-runtime"]
+	}
 }
