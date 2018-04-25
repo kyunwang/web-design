@@ -12,14 +12,11 @@
 		"copy": "copyfiles -u 1 ./src/img/**/** ./dist",
 		"copy:fonts": "copyfiles -u 1 ./src/fonts/**/** ./dist",
 		"build:html": "htmlprocessor ./src/*.html -o './dist/'",
-		"build:js":
-			"browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
+		"build:js": "browserify ./src/index.js -t babelify | uglifyjs -cm > ./dist/bundle.js",
 		"build:css":
 			"postcss --config './postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose",
-		"watch:img":
-			"onchange './src/img/*'  './src/img/**/**' -- yarn run copy",
-		"watch:js":
-			"watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
+		"watch:img": "onchange './src/img/*'  './src/img/**/**' -- yarn run copy",
+		"watch:js": "watchify ./src/index.js -t babelify -o ./dist/bundle.js -v",
 		"watch:css":
 			"postcss --config './src/postcss.config.js' ./src/styles/styles.css -o ./dist/styles/styles.css --verbose -w",
 		"watch:html": "onchange './src/*.html' -- yarn run build:html",
@@ -48,6 +45,7 @@
 		"postcss-modules": "^1.1.0",
 		"postcss-nesting": "^4.2.1",
 		"postcss-uncss": "^0.16.1",
+		"prettier": "1.12.1",
 		"rimraf": "^2.6.2",
 		"uncss": "^0.16.2",
 		"watchify": "^3.11.0"
