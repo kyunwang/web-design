@@ -410,6 +410,9 @@ main {
 			max-width: 32em;
 			font-size: 1.3rem;
 		}
+		& ul {
+			padding: 1rem 3rem;
+		}
 	}
 }
 
