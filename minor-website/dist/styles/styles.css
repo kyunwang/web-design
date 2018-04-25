@@ -271,12 +271,10 @@ main section>p button span {
         width: calc(100% + 5rem);
     }
     main aside img {
-        align-self: flex-start;
-        //   transform: translateX(-10rem);
+        align-self: flex-start;/* transform: translateX(-10rem); */
     }
     main aside p {
-        margin: 0;
-        //   transform: translateX(-10rem);
+        margin: 0;/* transform: translateX(-10rem); */
     }
 }
 
@@ -314,7 +312,8 @@ main section>p button span {
     position: relative;
     display: inline-block;
     flex: 0 0 40%;
-    padding: 1rem;
+    padding: 1rem;/* border: 3px solid var(--yellow); */
+    box-shadow: inset 0 0 0 3px #fed631;
     transition: background 0.3s ease-in;
 }
 

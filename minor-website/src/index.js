@@ -19,6 +19,7 @@
 			this.testSection.forEach((el, index) => {
 				if (index === 0) return;
 				el.classList.add('hide-testimonials');
+				el.classList.add('hide');
 			});
 		},
 		toggleSection: function(evt) {
