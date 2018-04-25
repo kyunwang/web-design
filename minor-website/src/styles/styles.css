@@ -554,7 +554,7 @@ main {
 				left: 15%;
 			}
 			&:last-of-type {
-				top: 2rem;
+				top: 3rem;
 				right: 15%;
 			}
 		}

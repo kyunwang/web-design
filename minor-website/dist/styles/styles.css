@@ -541,7 +541,7 @@ main section aside p:not(:first-of-type) {
 		left: 15%;
 	}
 	.next-step a:last-of-type {
-		top: 2rem;
+		top: 3rem;
 		right: 15%;
 	}
 }

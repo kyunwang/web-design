@@ -69,7 +69,7 @@
 			sectionDetails.moreContainer.forEach(el => {
 				if (el.dataset.moreInfo === evt.target.id) {
 					if (el.classList.contains('hide')) {
-						buttonText.textContent = 'Meer info';
+						buttonText.textContent = 'Minder';
 						console.log('show');
 						el.classList.remove('hide-more-info');
 						setTimeout(() => {
@@ -78,7 +78,7 @@
 						}, 300);
 						return;
 					} else {
-						buttonText.textContent = 'Minder info';
+						buttonText.textContent = 'Meer';
 						el.classList.remove('show-more-info');
 						el.classList.add('hide-more-info');
 						setTimeout(() => {
