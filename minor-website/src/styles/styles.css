@@ -216,7 +216,8 @@ main {
 			font-size: 4rem;
 			line-height: 0.9;
 			padding-left: 1rem;
-			padding-bottom: 0.5rem; // z-index: 10;
+			padding-bottom: 0.5rem;
+			/* z-index: 10; */
 			word-wrap: break-word;
 			overflow-wrap: break-word;
 			/* -webkit-hyphens: auto; */
@@ -235,11 +236,12 @@ main {
 		}
 		& p {
 			position: relative;
-			font-size: 1.1rem; // margin-left: 1rem;
+			font-size: 1.1rem;
+			/* margin-left: 1rem; */
 		}
 		& > p {
 			&:first-of-type {
-				//   color: red;
+				/* color: red; */
 				margin-left: 2rem;
 				&::before {
 					content: '';
@@ -331,8 +333,12 @@ main {
 		margin-bottom: 4rem;
 		width: 100%;
 		min-height: 12rem;
-		overflow-x: auto; //  overflow-y: visible;
-		//  word-wrap: unset;
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		/* overflow-y: visible; */
+		/* word-wrap: unset; */
 	}
 	& [type='radio'] {
 		position: absolute;
@@ -351,7 +357,8 @@ main {
 				top: -3rem;
 				left: 0;
 				right: 0;
-				font-size: 0.8rem; //   height: 3rem;
+				font-size: 0.8rem;
+				/* height: 3rem; */
 				width: max-content;
 				background: var(--black);
 				color: var(--white);
@@ -438,7 +445,7 @@ main {
 	}
 	& > p {
 		&:first-of-type {
-			// margin: 1em 0;
+			/* margin: 1em 0; */
 			&::before {
 				display: none;
 			}
@@ -453,9 +460,10 @@ main {
 		}
 	}
 	&:nth-of-type(even) {
-		//  background: red;
+		/* background: red; */
 		&::before {
-			left: 30%; // right: 2.6;
+			left: 30%;
+			/* right: 2.6; */
 		}
 		& h3 {
 			margin-left: 20%;
@@ -483,7 +491,8 @@ main {
 		}
 		&:nth-of-type(even) {
 			&::before {
-				left: 48%; // right: 2.6;
+				left: 48%;
+				/* right: 2.6; */
 			}
 			& h3 {
 				margin-left: 30%;

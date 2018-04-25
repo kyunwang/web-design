@@ -208,8 +208,7 @@ main section h3 {
 	font-size: 4rem;
 	line-height: 0.9;
 	padding-left: 1rem;
-	padding-bottom: 0.5rem;
-	// z-index: 10;
+	padding-bottom: 0.5rem;/* z-index: 10; */
 	word-wrap: break-word;
 	overflow-wrap: break-word;/* -webkit-hyphens: auto; *//* -moz-hyphens: auto; */
 	hyphens: auto;
@@ -228,12 +227,10 @@ main section h3::before {
 
 main section p {
 	position: relative;
-	font-size: 1.1rem;
-	// margin-left: 1rem;
+	font-size: 1.1rem;/* margin-left: 1rem; */
 }
 
-main section > p:first-of-type {
-	//   color: red;
+main section > p:first-of-type {/* color: red; */
 	margin-left: 2rem;
 }
 
@@ -321,8 +318,13 @@ main section aside p:not(:first-of-type) {
 	width: 100%;
 	min-height: 12rem;
 	overflow-x: auto;
-	//  overflow-y: visible;
-	//  word-wrap: unset;
+}
+
+.testimonials__container form::-webkit-scrollbar {
+	display: none;
+}
+
+.testimonials__container form {/* overflow-y: visible; *//* word-wrap: unset; */
 }
 
 .testimonials__container [type='radio'] {
@@ -345,8 +347,7 @@ main section aside p:not(:first-of-type) {
 	top: -3rem;
 	left: 0;
 	right: 0;
-	font-size: 0.8rem;
-	//   height: 3rem;
+	font-size: 0.8rem;/* height: 3rem; */
 	width: max-content;
 	background: #000;
 	color: #fff;
@@ -434,8 +435,7 @@ main section aside p:not(:first-of-type) {
 	margin-left: 2rem;
 }
 
-.program__container > p:first-of-type {
-	// margin: 1em 0;
+.program__container > p:first-of-type {/* margin: 1em 0; */
 }
 
 .program__container > p:first-of-type::before {
@@ -452,13 +452,11 @@ main section aside p:not(:first-of-type) {
 	color: #fed631;
 }
 
-.program__container:nth-of-type(even) {
-	//  background: red;
+.program__container:nth-of-type(even) {/* background: red; */
 }
 
 .program__container:nth-of-type(even)::before {
-	left: 30%;
-	// right: 2.6;
+	left: 30%;/* right: 2.6; */
 }
 
 .program__container:nth-of-type(even) h3 {
@@ -482,8 +480,7 @@ main section aside p:not(:first-of-type) {
 	.program__container p:first-of-type {
 }
 	.program__container:nth-of-type(even)::before {
-		left: 48%;
-		// right: 2.6;
+		left: 48%;/* right: 2.6; */
 	}
 	.program__container:nth-of-type(even) h3 {
 		margin-left: 30%;
