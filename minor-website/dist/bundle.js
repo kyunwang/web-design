@@ -14,19 +14,32 @@
 			this.testSection = document.querySelectorAll('.testimonials__container li');
 
 			// Add toggle evvents to the radiobuttons/labels
-			addEvents(this.radioToggle, 'click', evt => this.toggleSection(evt.target.id));
+			addEvents(this.radioToggle, 'click', evt => this.toggleSection(evt), true);
 
 			// Hide all testimonials except first one if there is js
 			this.testSection.forEach((el, index) => {
 				if (index === 0) return;
-				el.classList.add('hide');
+				el.classList.add('hide-testimonials');
 			});
 		},
-		toggleSection: function (showEl) {
+		toggleSection: function (evt) {
+			// evt.preventDefault();
 			// Toggle the testimonial sections
 			testimonials.testSection.forEach(el => {
-				if (el.dataset.testimonial === showEl) return el.classList.remove('hide');
-				el.classList.add('hide');
+				if (el.dataset.testimonial === evt.target.id) {
+					el.classList.remove('hide-testimonials');
+					el.classList.add('show-testimonials');
+					setTimeout(() => {
+						el.classList.remove('hide');
+					}, 300);
+					return;
+				}
+
+				el.classList.remove('show-testimonials');
+				el.classList.add('hide-testimonials');
+				setTimeout(() => {
+					el.classList.add('hide');
+				}, 300);
 			});
 		}
 	};
