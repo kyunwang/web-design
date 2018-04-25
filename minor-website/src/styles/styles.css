@@ -242,6 +242,11 @@ main {
                 }
             }
         }
+        & aside {
+            & p:not(:first-of-type) {
+                margin-top: 1.5rem;
+            }
+        }
     }
 }
 
@@ -270,19 +275,28 @@ main {
                 font-size: 1.3rem;
                 max-width: 32em;
             }
-        }
-        & aside {
-            display: flex;
-            margin-top: 1rem;
-            transform: translateX(-5rem);
-            width: calc(100% + 5rem);
-            & img {
-                align-self: flex-start;
-                /* transform: translateX(-10rem); */
+            & aside {
+                display: flex;
+                margin-top: 1rem;
+                transform: translateX(-5rem);
+                width: calc(100% + 5rem);
+                & img {
+                    align-self: flex-start;
+                    /* transform: translateX(-10rem); */
+                }
+                & p {
+                    margin: 0;
+                    /* transform: translateX(-10rem); */
+                }
             }
-            & p {
-                margin: 0;
-                /* transform: translateX(-10rem); */
+            &:nth-of-type(2n + 0) {
+                /* background: red; */
+                & img {
+                    padding-left: 2rem;
+                }
+                & aside {
+                    transform: translateX(5rem);
+                }
             }
         }
     }
@@ -296,6 +310,7 @@ main {
     padding: 0;
     & h3 {
         padding: 0 3.5rem;
+        padding-bottom: 0.5rem;
     }
     & form {
         display: flex;
