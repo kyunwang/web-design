@@ -35,7 +35,7 @@
 		<section>
 			<h3>Introductie</h3>
 			<p>
-				<button class="button__more">
+				<button id="intro" class="button__more">
 					<span>Meer info</span>
 				</button>
 				Deze minor leert je interactieve toepassingen maken met de webtechnologieën: HTML, CSS en JavaScript. In verschillende vakken
@@ -45,7 +45,7 @@
 
 			<aside>
 				<img src="../assets/images/table.jpg" alt="Studententen die discussiëren">
-				<div class="more-info__container">
+				<div class="more-info__container" data-more-info="intro">
 					<p>
 						De minor wordt aangeboden door de opleiding CMD van de Hogeschool van Amsterdam. CMD Amsterdam is een ontwerpopleiding digital
 						design met drie focuspunten: interaction design, visual design en front-end development. De minor sluit aan bij het
@@ -58,14 +58,14 @@
 		<section>
 			<h3>Is deze minor voor mij?</h3>
 			<p>
-				<button class="button__more">
+				<button id="for-me" class="button__more">
 					<span>Meer info</span>
 				</button>
 				We gaan werken met verschillende webtechnologieën. Samen met bedrijven uit de creatieve industrie verkennen we de grenzen
 				van wat er mogelijk is op het web. Van studenten wordt verwacht dat ze gedegen kennis hebben van HTML, CSS en JavaScript.
 			</p>
 			<aside>
-				<div class="more-info__container">
+				<div class="more-info__container" data-more-info="for-me">
 					<p>
 						Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met techniek of wil je je technische (design)
 						skills verdiepen? Droom je van Real time, Responsive en Reactive? Of misschien wil je dat leren? Dan is deze minor
@@ -182,7 +182,7 @@
 		</section>
 	</main>
 
-	<footer>
+	<footer class="next-step">
 		<a href="programma.html">Programma</a>
 		<a href="over.html">Over</a>
 	</footer>
