@@ -105,7 +105,12 @@ The ICT Student at HvA and CMD(The minor is hosted by CMD) student learn differe
 
 ## Sketches
 *A few sketches will be placed here*
+<details>
+<summary>Show/Hide Sketches</summary>
+	
 ![](doc/images/design/sketches.jpg)
+
+</details>
 
 ## Digital
 This is the design made for the minor website, this time with a *desktop first* approach instead of *mobile first*. The goal was to make the content clear and seperate them to induce one primary action per state (block);
@@ -113,7 +118,8 @@ This is the design made for the minor website, this time with a *desktop first* 
 *Note: This is a 'take away' design to follow and there exists some testing in it e.g. the wat the header is presented*
 
 *Design is a subject to change in development (Which did happen in some cases*
-
+<details>
+	
 **Introduction**
 
 ![](doc/images/design/intro.png)
@@ -130,6 +136,8 @@ This is the design made for the minor website, this time with a *desktop first* 
 
 ![](doc/images/design/intro-m.png)
 
+<summary>Show/Hide Sketches</summary>
+</details>
 
 ## Principles
 The following principle from this article has been implemented and where/how.
