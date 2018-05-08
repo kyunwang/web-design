@@ -3,6 +3,8 @@ This repo is for a course from minor Everything Web at HvA.
 
 The content used for this project comes from the current minor website found [HERE][current] (20-04-2018)
 
+Website live **[HERE](https://kyunwang.github.io/web-design/minor-website/dist)**
+
 *The content is in dutch*
 
 # Table of Content
