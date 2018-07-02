@@ -34,11 +34,13 @@ This project will be a redesign with the goal of implementing *Exclusive design*
 <!-- Principles of ai too? e.g. browsing behaviour and sort/filtering -->
 
 # Getting started
+*This project uses yarn*
+
 Here is how to get started with this project
 1. Download or clone the repo `git clone https://github.com/kyunwang/web-design.git`
 2. Run `cd minor-website`
-3. Run `npm install` or `yarn`
-4. Do a `npm run dev` or `yarn dev`
+3. Run `yarn`
+4. Do `yarn dev`
 5. Go to [localhost:3000](localhost:3000) and you are ready to go.
 
 # Content
