@@ -8,6 +8,7 @@
 	/*  colors */
 	--black: #000;
 	--white: #fff;
+	--grey: #a0a0a0;
 	--yellow: #fed631;
 	/*  White spaces */
 	--def-transition: 0.3s ease-in;
@@ -18,7 +19,7 @@ html {
 	/* background: var(--black); */
 	/* color: var(--white); */
 	font-family: var(--fonts);
-	color: black;
+	color: var(--black);
 }
 
 *,
@@ -58,6 +59,12 @@ body {
 }
 
 main {
+}
+
+input,
+textarea {
+	font-family: var(--fonts);
+	font-weight: var(--f-regular);
 }
 
 /*==========================
@@ -352,18 +359,18 @@ main {
 			box-shadow: inset 0 0 0 3px var(--yellow);
 			transition: background var(--def-transition);
 			&::before {
-				content: 'selecteer';
+				/* content: 'selecteer';
 				position: absolute;
 				top: -3rem;
 				left: 0;
 				right: 0;
 				font-size: 0.8rem;
-				/* height: 3rem; */
+				/* height: 3rem;
 				width: max-content;
 				background: var(--black);
 				color: var(--white);
 				margin: 0 auto;
-				padding: 0.5rem 1rem;
+				padding: 0.5rem 1rem; */
 			}
 			&:hover,
 			&:focus {
@@ -559,6 +566,103 @@ main {
 			&:last-of-type {
 				top: 3rem;
 				right: 15%;
+			}
+		}
+	}
+}
+
+/*==========================
+=== Form styles
+===========================*/
+
+.form__container {
+	margin-bottom: 4rem;
+
+	& form {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.3rem;
+		max-width: 42rem;
+		padding-left: 7rem;
+
+		& div {
+			display: block;
+			position: relative;
+			margin-bottom: 1.5rem;
+
+			& :before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				height: 0.2rem;
+				width: 100%;
+				background: var(--yellow);
+			}
+		}
+
+		& input,
+		& textarea {
+			font-size: 1.3rem;
+			/* border: 0.01rem solid var(--grey); */
+			border: none;
+			padding: 1.2rem 1rem;
+			width: 100%;
+		}
+
+		& label {
+			position: absolute;
+			top: 1.2rem;
+			left: 1rem;
+			font-weight: 100;
+			color: var(--grey);
+
+			transition: var(--def-transition);
+			transition-duration: 0.1s;
+		}
+
+		& input,
+		& textarea {
+			&:valid {
+				& + label {
+					top: 0.4rem;
+					font-size: 0.7rem;
+					font-weight: 700;
+				}
+			}
+			/* 
+			&:not(:placeholder-shown) {
+				border-color: green;
+			} */
+
+			&:focus,
+			&:hover {
+				outline: 0;
+				& + label {
+					top: 0.4rem;
+					font-size: 0.7rem;
+					font-weight: 700;
+				}
+			}
+		}
+
+		& [type='submit'] {
+			display: inline-block;
+			/* position: absolute; */
+			min-width: 6rem;
+			/* background: var(--white); */
+			background: var(--yellow);
+			box-shadow: inset 0 0 0 3px var(--yellow);
+			color: var(--black);
+			font-weight: var(--bold);
+			font-size: 1.2rem;
+			text-align: center;
+			border: 0;
+			padding: 1rem 3rem;
+			transition: var(--def-transition);
+
+			&:focus,
+			&:hover {
+				background: var(--white);
 			}
 		}
 	}

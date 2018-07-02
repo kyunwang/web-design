@@ -28,11 +28,40 @@
 			</ul>
 		</nav>
 		<h2>Contact</h2>
+		<p>
+
+		</p>
 	</header>
 
-	<!-- build:js ./bundle.js -->
-	<script src="./index.js"></script>
-	<!-- /build -->
+	<main>
+		<section class="form__container">
+			<!-- <h3>Contact</h3> -->
+			<p>
+				Heb je nog onbeantwoorde vragen? Of al besloten dat dit de minor voor jou is? Of heb je iets anders te melden? Stuur ons
+				een berichtje.
+			</p>
+
+			<form action="">
+				<div>
+					<input id="f-name" type="text" required>
+					<label for="f-name">Naam</label>
+				</div>
+
+				<div>
+					<input id="f-email" type="email" required placeholder=" ">
+					<label for="f-email">Email</label>
+				</div>
+
+				<div>
+					<textarea name="f-motivation" id="f-motivation" cols="30" rows="3" required></textarea>
+					<label for="f-motivation">Motivatie</label>
+				</div>
+
+				<input type="submit">
+			</form>
+		</section>
+	</main>
+
 </body>
 
 </html>
