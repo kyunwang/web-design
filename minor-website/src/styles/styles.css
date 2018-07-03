@@ -135,6 +135,7 @@ header {
 	& a {
 		display: inline-block;
 		position: relative;
+		font-size: 0.8rem;
 		padding: 0 1rem;
 		padding-bottom: 0.3rem;
 		font-weight: var(--bold);
@@ -186,6 +187,10 @@ header {
 	header {
 		& h2 {
 			font-size: 8rem;
+		}
+
+		& a {
+			font-size: 1rem;
 		}
 	}
 	.header__icon--surveillance {
@@ -553,7 +558,6 @@ main {
 			margin-bottom: 1.5rem;
 
 			& span {
-				/* display: block; */
 				overflow-x: hidden;
 				height: 0.15rem;
 				width: 100%;
@@ -564,7 +568,6 @@ main {
 				&:before {
 					content: '';
 					position: absolute;
-					/* bottom: 0; */
 					height: 0.15rem;
 					width: 100%;
 					transform: translateX(-100%);

@@ -131,6 +131,7 @@ header ul {
 header a {
 	display: inline-block;
 	position: relative;
+	font-size: 0.8rem;
 	padding: 0 1rem;
 	padding-bottom: 0.3rem;
 	font-weight: 900;
@@ -180,6 +181,9 @@ header h2 {
 @media all and (min-width: 40em) {
 	header h2 {
 		font-size: 8rem;
+	}
+	header a {
+		font-size: 1rem;
 	}
 	.header__icon--surveillance {
 		top: 2rem;
@@ -547,7 +551,7 @@ main section aside p:not(:first-of-type) {
 	margin-bottom: 1.5rem;
 }
 
-.form__container form div span {/* display: block; */
+.form__container form div span {
 	overflow-x: hidden;
 	height: 0.15rem;
 	width: 100%;
@@ -558,7 +562,7 @@ main section aside p:not(:first-of-type) {
 
 .form__container form div span:before {
 	content: '';
-	position: absolute;/* bottom: 0; */
+	position: absolute;
 	height: 0.15rem;
 	width: 100%;
 	transform: translateX(-100%);
