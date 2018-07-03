@@ -579,13 +579,24 @@ main section aside p:not(:first-of-type) {
 	margin-bottom: 1.5rem;
 }
 
-.form__container form div:before {
-	content: '';
-	position: absolute;
-	bottom: 0;
+.form__container form div span {/* display: block; */
+	overflow-x: hidden;
 	height: 0.2rem;
 	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background: #a0a0a0;
+}
+
+.form__container form div span:before {
+	content: '';
+	position: absolute;/* bottom: 0; */
+	height: 0.2rem;
+	width: 100%;
+	transform: translateX(-100%);
 	background: #fed631;
+	transition: 0.3s ease-in;
+	transition-duration: 0.1s;
 }
 
 .form__container form input,
@@ -612,6 +623,10 @@ main section aside p:not(:first-of-type) {
 	font-weight: 700;
 }
 
+.form__container form input:valid ~ svg, .form__container form textarea:valid ~ svg {
+	opacity: 1;
+}
+
 .form__container form input:focus,
 			.form__container form input:hover,
 			.form__container form textarea:focus,
@@ -625,7 +640,25 @@ main section aside p:not(:first-of-type) {
 	font-weight: 700;
 }
 
-.form__container form [type='submit'] {
+.form__container form input:valid ~ span:before, .form__container form input:focus ~ span:before, .form__container form input:hover ~ span:before, .form__container form textarea:valid ~ span:before, .form__container form textarea:focus ~ span:before, .form__container form textarea:hover ~ span:before {
+	transform: translateX(0);
+}
+
+.form__container form svg {
+	position: absolute;
+	right: 0;
+	bottom: 1rem;
+	width: 2rem;
+	height: 2rem;
+	opacity: 0;
+	transition: 0.3s ease-in;
+}
+
+.form__container form svg g {
+	fill: #fed631;
+}
+
+.form__container [type='submit'] {
 	display: inline-block;
 	min-width: 6rem;
 	background: #fed631;
@@ -639,8 +672,8 @@ main section aside p:not(:first-of-type) {
 	transition: 0.3s ease-in;
 }
 
-.form__container form [type='submit']:focus,
-			.form__container form [type='submit']:hover {
+.form__container [type='submit']:focus,
+		.form__container [type='submit']:hover {
 	background: #fff;
 }
 
