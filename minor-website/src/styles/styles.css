@@ -320,6 +320,7 @@ main {
 	& form {
 		display: flex;
 		flex-wrap: nowrap;
+		flex-direction: column;
 		font-size: 1.1rem;
 		font-weight: var(--bold);
 		margin-bottom: 4rem;
@@ -351,6 +352,8 @@ main {
 		}
 	}
 	& ul {
+		display: flex;
+		flex-direction: column;
 		padding: 1rem;
 		font-weight: var(--f-regular);
 	}
@@ -367,12 +370,18 @@ main {
 		width: 4rem;
 		z-index: -10;
 		transform: translate(-25%, -30%);
+		&:nth-of-type(even) {
+			right: 0;
+			bottom: 0;
+			transform: translate(-25%, -30%) rotate(180deg);
+		}
 	}
 }
 
 @media all and (min-width: 40em) {
 	.testimonials__container {
 		& form {
+			flex-direction: row;
 			font-size: 1.3rem;
 		}
 		& [type='radio'] {
@@ -385,8 +394,13 @@ main {
 		& blockquote {
 			max-width: 32em;
 			font-size: 1.3rem;
+			&:nth-of-type(even) {
+				margin-left: auto;
+			}
 		}
 		& ul {
+			max-width: 70rem;
+			margin: auto;
 			padding: 1rem 3rem;
 		}
 	}

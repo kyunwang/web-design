@@ -310,6 +310,7 @@ main section aside p:not(:first-of-type) {
 .testimonials__container form {
 	display: flex;
 	flex-wrap: nowrap;
+	flex-direction: column;
 	font-size: 1.1rem;
 	font-weight: 900;
 	margin-bottom: 4rem;
@@ -346,6 +347,8 @@ main section aside p:not(:first-of-type) {
 }
 
 .testimonials__container ul {
+	display: flex;
+	flex-direction: column;
 	padding: 1rem;
 	font-weight: 300;
 }
@@ -367,8 +370,15 @@ main section aside p:not(:first-of-type) {
 	transform: translate(-25%, -30%);
 }
 
+.testimonials__container .icon__quote:nth-of-type(even) {
+	right: 0;
+	bottom: 0;
+	transform: translate(-25%, -30%) rotate(180deg);
+}
+
 @media all and (min-width: 40em) {
 	.testimonials__container form {
+		flex-direction: row;
 		font-size: 1.3rem;
 	}
 	.testimonials__container [type='radio'] + label {
@@ -380,7 +390,12 @@ main section aside p:not(:first-of-type) {
 		max-width: 32em;
 		font-size: 1.3rem;
 	}
+	.testimonials__container blockquote:nth-of-type(even) {
+		margin-left: auto;
+	}
 	.testimonials__container ul {
+		max-width: 70rem;
+		margin: auto;
 		padding: 1rem 3rem;
 	}
 }
