@@ -492,65 +492,15 @@ main section aside p:not(:first-of-type) {
 }
 
 /*==========================
-=== Footer
-===========================*/
-
-.next-step {
-	display: flex;
-	position: relative;
-	justify-content: space-between;
-	height: 120%;
-	min-height: 7rem;
-	margin: 5rem 0
-}
-
-.next-step a {
-	display: inline-block;
-	position: absolute;
-	min-width: 6rem;/* background: var(--white); */
-	background: #fed631;
-	box-shadow: inset 0 0 0 3px #fed631;
-	color: #000;
-	font-weight: 900;
-	font-size: 1.2rem;
-	text-align: center;
-	padding: 1rem 3rem;
-	transition: 0.3s ease-in;
-}
-
-.next-step a:first-of-type {/* top: 1rem; */
-}
-
-.next-step a:last-of-type {
-	top: 2rem;
-	right: 0;
-}
-
-.next-step a:focus,
-		.next-step a:hover {
-	background: #fff;
-}
-
-@media all and (min-width: 40em) {
-	.next-step a {
-		min-width: 10rem;
-		font-size: 2rem;
-	}
-	.next-step a:first-of-type {/* top: 1rem; */
-		left: 15%;
-	}
-	.next-step a:last-of-type {
-		top: 3rem;
-		right: 15%;
-	}
-}
-
-/*==========================
 === Form styles
 ===========================*/
 
 .form__container {
 	margin-bottom: 4rem
+}
+
+.form__container img {
+	display: none;
 }
 
 .form__container form {
@@ -672,6 +622,73 @@ main section aside p:not(:first-of-type) {
 	.form__container input,
 		.form__container textarea {
 		font-size: 1.3rem;
+	}
+}
+
+@media all and (min-width: 80em) {
+	.form__container img {
+		display: block;
+		position: absolute;/* right: 0; */
+		left: 45%;
+		top: 30%;
+	}
+	.form__container img:nth-of-type(2) {
+		left: 55%;
+		top: 10%;
+	}
+}
+
+/*==========================
+=== Footer
+===========================*/
+
+.next-step {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	height: 120%;
+	min-height: 7rem;
+	margin: 5rem 0
+}
+
+.next-step a {
+	display: inline-block;
+	position: absolute;
+	min-width: 6rem;/* background: var(--white); */
+	background: #fed631;
+	box-shadow: inset 0 0 0 3px #fed631;
+	color: #000;
+	font-weight: 900;
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 1rem 3rem;
+	transition: 0.3s ease-in;
+}
+
+.next-step a:first-of-type {/* top: 1rem; */
+}
+
+.next-step a:last-of-type {
+	top: 2rem;
+	right: 0;
+}
+
+.next-step a:focus,
+		.next-step a:hover {
+	background: #fff;
+}
+
+@media all and (min-width: 40em) {
+	.next-step a {
+		min-width: 10rem;
+		font-size: 2rem;
+	}
+	.next-step a:first-of-type {/* top: 1rem; */
+		left: 15%;
+	}
+	.next-step a:last-of-type {
+		top: 3rem;
+		right: 15%;
 	}
 }
 
