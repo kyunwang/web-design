@@ -92,35 +92,23 @@ textarea {
 
 @keyframes hide-more-info {
 	from {
-		/* visibility: hidden; */
-		/* max-width: auto; */
-		/* max-height: auto; */
 		opacity: 1;
-		transform: translateX(0rem);
+		transform: translateY(0rem);
 	}
 	to {
-		/* max-width: 0; */
-		/* max-height: 0; */
-		/* visibility: visible; */
 		opacity: 0;
-		transform: translateX(-6rem);
+		transform: translateY(-6rem);
 	}
 }
 
 @keyframes show-more-info {
 	from {
-		/* max-width: 0; */
-		/* max-height: 0; */
-		/* visibility: hidden; */
 		opacity: 0;
-		transform: translateX(-6rem);
+		transform: translateY(-6rem);
 	}
 	to {
-		/* max-width: auto; */
-		/* max-height: auto; */
-		/* visibility: visible; */
 		opacity: 1;
-		transform: translateX(0rem);
+		transform: translateY(0rem);
 	}
 }
 
@@ -131,8 +119,6 @@ textarea {
 header {
 	background: #fed631;
 	min-height: 40vh
-	/* display: block; */
-	/* width: 100%; */
 }
 
 header ul {
@@ -176,7 +162,7 @@ header h2 {
 	padding-bottom: 3rem;
 	font-size: 5rem;
 	word-wrap: break-word;
-	overflow-wrap: break-word;/* -webkit-hyphens: auto; *//* -moz-hyphens: auto; */
+	overflow-wrap: break-word;
 	hyphens: auto;
 }
 
@@ -217,7 +203,7 @@ main section h3 {
 	padding-left: 1rem;
 	padding-bottom: 0.5rem;/* z-index: 10; */
 	word-wrap: break-word;
-	overflow-wrap: break-word;/* -webkit-hyphens: auto; *//* -moz-hyphens: auto; */
+	overflow-wrap: break-word;
 	hyphens: auto;
 }
 
@@ -234,7 +220,7 @@ main section h3::before {
 
 main section p {
 	position: relative;
-	font-size: 1.1rem;/* margin-left: 1rem; */
+	font-size: 1.1rem;
 }
 
 main section > p:first-of-type {/* color: red; */
@@ -289,10 +275,10 @@ main section aside p:not(:first-of-type) {
 		width: calc(100% + 5rem);
 	}
 	main section aside img {
-		align-self: flex-start;/* transform: translateX(-10rem); */
+		align-self: flex-start;
 	}
 	main section aside p {
-		margin: 0;/* transform: translateX(-10rem); */
+		margin: 0;
 	}
 	main section:nth-of-type(2n + 0) {/* background: red; */
 	}
@@ -332,9 +318,6 @@ main section aside p:not(:first-of-type) {
 	display: none;
 }
 
-.testimonials__container form {/* overflow-y: visible; *//* word-wrap: unset; */
-}
-
 .testimonials__container [type='radio'] {
 	position: absolute;
 	left: -300%;
@@ -344,23 +327,9 @@ main section aside p:not(:first-of-type) {
 	position: relative;
 	display: inline-block;
 	flex: 0 0 40%;
-	padding: 1rem;/* border: 3px solid var(--yellow); */
+	padding: 1rem;
 	box-shadow: inset 0 0 0 3px #fed631;
 	transition: background 0.3s ease-in;
-}
-
-.testimonials__container [type='radio'] + label::before {/* content: 'selecteer';
-				position: absolute;
-				top: -3rem;
-				left: 0;
-				right: 0;
-				font-size: 0.8rem;
-				/* height: 3rem;
-				width: max-content;
-				background: var(--black);
-				color: var(--white);
-				margin: 0 auto;
-				padding: 0.5rem 1rem; */
 }
 
 .testimonials__container [type='radio'] + label:hover,
@@ -491,7 +460,7 @@ main section aside p:not(:first-of-type) {
 	.program__container p:first-of-type {
 }
 	.program__container:nth-of-type(even)::before {
-		left: 48%;/* right: 2.6; */
+		left: 48%;
 	}
 	.program__container:nth-of-type(even) h3 {
 		margin-left: 30%;
@@ -568,9 +537,8 @@ main section aside p:not(:first-of-type) {
 .form__container form {
 	display: flex;
 	flex-direction: column;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	max-width: 42rem;
-	padding-left: 7rem;
 }
 
 .form__container form div {
@@ -581,7 +549,7 @@ main section aside p:not(:first-of-type) {
 
 .form__container form div span {/* display: block; */
 	overflow-x: hidden;
-	height: 0.2rem;
+	height: 0.15rem;
 	width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -591,7 +559,7 @@ main section aside p:not(:first-of-type) {
 .form__container form div span:before {
 	content: '';
 	position: absolute;/* bottom: 0; */
-	height: 0.2rem;
+	height: 0.15rem;
 	width: 100%;
 	transform: translateX(-100%);
 	background: #fed631;
@@ -601,7 +569,7 @@ main section aside p:not(:first-of-type) {
 
 .form__container form input,
 		.form__container form textarea {
-	font-size: 1.3rem;/* border: 0.01rem solid var(--grey); */
+	font-size: 1.1rem;
 	border: none;
 	padding: 1.2rem 1rem;
 	width: 100%;
@@ -675,6 +643,17 @@ main section aside p:not(:first-of-type) {
 .form__container [type='submit']:focus,
 		.form__container [type='submit']:hover {
 	background: #fff;
+}
+
+@media all and (min-width: 40em) {
+	.form__container form {
+		padding-left: 7rem;
+		font-size: 1.3rem;
+	}
+	.form__container input,
+		.form__container textarea {
+		font-size: 1.3rem;
+	}
 }
 
 /*==========================
