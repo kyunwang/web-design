@@ -9,8 +9,8 @@ html {
 	box-sizing: border-box;
 	/* background: var(--black); */
 	/* color: var(--white); */
-	font-family: 'open sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Helvetica Neue', sans-serif;
 	color: #000;
 }
 
@@ -55,8 +55,8 @@ main {
 
 input,
 textarea {
-	font-family: 'open sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Helvetica Neue', sans-serif;
 	font-weight: 300;
 }
 
@@ -281,6 +281,7 @@ main section aside p:not(:first-of-type) {
 		margin-top: 1rem;
 		transform: translateX(-5rem);
 		width: calc(100% + 5rem);
+		overflow: hidden;
 	}
 	main section aside img {
 		align-self: flex-start;
