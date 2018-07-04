@@ -93,10 +93,12 @@ textarea {
 @keyframes hide-more-info {
 	from {
 		opacity: 1;
+		width: 50%;
 		transform: translateY(0rem);
 	}
 	to {
 		opacity: 0;
+		width: 0%;
 		transform: translateY(-6rem);
 	}
 }
@@ -104,10 +106,12 @@ textarea {
 @keyframes show-more-info {
 	from {
 		opacity: 0;
+		width: 0%;
 		transform: translateY(-6rem);
 	}
 	to {
 		opacity: 1;
+		width: 50%;
 		transform: translateY(0rem);
 	}
 }
@@ -284,10 +288,9 @@ main section aside p:not(:first-of-type) {
 	main section aside p {
 		margin: 0;
 	}
-	main section:nth-of-type(2n + 0) {/* background: red; */
-	}
 	main section:nth-of-type(2n + 0) img {
 		padding-left: 2rem;
+		transition: transform 0.3s ease-in;
 	}
 	main section:nth-of-type(2n + 0) aside {
 		transform: translateX(5rem);
