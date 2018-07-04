@@ -118,7 +118,7 @@ textarea {
 
 header {
 	background: #fed631;
-	min-height: 40vh
+	min-height: 35vh
 }
 
 header ul {
@@ -542,16 +542,7 @@ main section aside p:not(:first-of-type) {
 	border: none;
 	padding: 1.2rem 1rem;
 	width: 100%;
-}
-
-.form__container form label {
-	position: absolute;
-	top: 1.2rem;
-	left: 1rem;
-	font-weight: 100;
-	color: #a0a0a0;
-	transition: 0.3s ease-in;
-	transition-duration: 0.1s;
+	background: none;
 }
 
 .form__container form input:valid + label, .form__container form textarea:valid + label {
@@ -579,6 +570,16 @@ main section aside p:not(:first-of-type) {
 
 .form__container form input:valid ~ span:before, .form__container form input:focus ~ span:before, .form__container form input:hover ~ span:before, .form__container form textarea:valid ~ span:before, .form__container form textarea:focus ~ span:before, .form__container form textarea:hover ~ span:before {
 	transform: translateX(0);
+}
+
+.form__container form label {
+	position: absolute;
+	top: 1.2rem;
+	left: 1rem;
+	font-weight: 100;
+	color: #a0a0a0;
+	transition: 0.3s ease-in;
+	transition-duration: 0.1s;
 }
 
 .form__container form svg {
@@ -629,7 +630,7 @@ main section aside p:not(:first-of-type) {
 	.form__container img {
 		display: block;
 		position: absolute;/* right: 0; */
-		left: 45%;
+		left: 55%;
 		top: 30%;
 	}
 	.form__container img:nth-of-type(2) {
@@ -669,7 +670,7 @@ main section aside p:not(:first-of-type) {
 }
 
 .next-step a:last-of-type {
-	top: 2rem;
+	top: 3rem;
 	right: 0;
 }
 

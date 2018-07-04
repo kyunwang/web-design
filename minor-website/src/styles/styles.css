@@ -125,7 +125,7 @@ textarea {
 
 header {
 	background: var(--yellow);
-	min-height: 40vh;
+	min-height: 35vh;
 	& ul {
 		display: flex;
 		justify-content: center;
@@ -547,21 +547,8 @@ main {
 			border: none;
 			padding: 1.2rem 1rem;
 			width: 100%;
-		}
+			background: none;
 
-		& label {
-			position: absolute;
-			top: 1.2rem;
-			left: 1rem;
-			font-weight: 100;
-			color: var(--grey);
-
-			transition: var(--def-transition);
-			transition-duration: 0.1s;
-		}
-
-		& input,
-		& textarea {
 			&:valid {
 				& + label {
 					top: 0.2rem;
@@ -593,6 +580,17 @@ main {
 					}
 				}
 			}
+		}
+
+		& label {
+			position: absolute;
+			top: 1.2rem;
+			left: 1rem;
+			font-weight: 100;
+			color: var(--grey);
+
+			transition: var(--def-transition);
+			transition-duration: 0.1s;
 		}
 
 		& svg {
@@ -650,7 +648,7 @@ main {
 			display: block;
 			position: absolute;
 			/* right: 0; */
-			left: 45%;
+			left: 55%;
 			top: 30%;
 
 			&:nth-of-type(2) {
@@ -689,7 +687,7 @@ main {
 			/* top: 1rem; */
 		}
 		&:last-of-type {
-			top: 2rem;
+			top: 3rem;
 			right: 0;
 		}
 		&:focus,
