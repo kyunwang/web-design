@@ -95,13 +95,14 @@ This means that that the difference between the Dutch Sign Language and Dutch ca
 **Goal:** Deliver clear and consice content for Marie(and other Deaf) to show what this minor is all about.
 
 ## Potential minor student
-**The potential student is a ICT student at the HvA**
+**The potential student is a Software Engineer student called Bas**
 
-The ICT Student at HvA and CMD(The minor is hosted by CMD) student learn different but similar things. A ICT student might be interested in the minor Everything web and wants to learn more about the minor.
+As software engineer student, Bas learns all about the back-end but not front-end.
+He might be interested in the minor Everything web to learn more about front-end to complement his skills.
 
-**Scenario:** The ICT student is looking for a Minor and is interested in the Minor Everything Web. He/She want to learn more about the contents and opinions of other students to form his/her own opinion before making his/her decision.
+**Scenario:** Bas is looking for a minor and stumbles across Minor Everything Web during his search. He wants to learn about the minor to be certain that this is what he is looking for. He wants to know what the subjects given will benefit him and knowing about the experience of other students wouldn't hurt either. 
 
-**Goal:** Showcase the minor with content to instill curiousity for the potential student. The student needs to be able to contact someone or sign in.
+**Goal:** Showcase the minor with content to instill a curiosity for the potential student. The student needs to be able to contact someone or sign in.
 
 # Design
 
