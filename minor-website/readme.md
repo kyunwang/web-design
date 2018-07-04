@@ -170,10 +170,10 @@ As Marie is pretty comfortable with multiple sign languages and reads frequently
 
 # To do
 The to do list for when I have the time to fix it or if someone wants to make a PR *winkwink*
-- [ ] Fix the transitions on the intro page
-- [ ] Make the testimonials section responsive (mobile is done)
+- [x] Fix the transitions on the intro page
+- [x] Make the testimonials section responsive
 - [ ] Process the feedback from the test (See [usertest](#user-test))
-- [ ] Remove or create the *Contact* page (Thinking about the need for it in this scenario)
+- [x] Create the Contact page - (The submit will not be working)
 
 
 
