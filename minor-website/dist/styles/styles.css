@@ -557,12 +557,14 @@ main section aside p:not(:first-of-type) {
 
 .form__container form input:focus,
 			.form__container form input:hover,
+			.form__container form input:not(:placeholder-shown),
 			.form__container form textarea:focus,
-			.form__container form textarea:hover {
+			.form__container form textarea:hover,
+			.form__container form textarea:not(:placeholder-shown) {
 	outline: 0;
 }
 
-.form__container form input:focus + label, .form__container form input:hover + label, .form__container form textarea:focus + label, .form__container form textarea:hover + label {
+.form__container form input:focus + label, .form__container form input:hover + label, .form__container form input:not(:placeholder-shown) + label, .form__container form textarea:focus + label, .form__container form textarea:hover + label, .form__container form textarea:not(:placeholder-shown) + label {
 	top: 0.2rem;
 	font-size: 0.7rem;
 	font-weight: 700;

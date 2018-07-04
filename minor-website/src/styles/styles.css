@@ -562,7 +562,8 @@ main {
 			}
 
 			&:focus,
-			&:hover {
+			&:hover,
+			&:not(:placeholder-shown) {
 				outline: 0;
 				& + label {
 					top: 0.2rem;
