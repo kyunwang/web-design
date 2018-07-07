@@ -17,7 +17,7 @@
 			this.radioToggle = document.querySelectorAll('.testimonials__container [type="radio"]');
 			this.testSection = document.querySelectorAll('.testimonials__container li');
 
-			// Add toggle evvents to the radiobuttons/labels
+			// Add toggle events to the radiobuttons/labels
 			addEvents(this.radioToggle, 'click', function (evt) {
 				return _this.toggleSection(evt);
 			}, true);
@@ -58,7 +58,6 @@
 		init: function init() {
 			var _this2 = this;
 
-			console.log('Init toggle');
 			this.moreToggle = document.querySelectorAll('.button__more');
 			this.moreContainer = document.querySelectorAll('.more-info__container');
 
@@ -67,26 +66,19 @@
 				return _this2.toggleDetail(evt);
 			}, true);
 
-			// this.moreToggle.forEach(el => {});
 			// Hide all testimonials except first one if there is js
 			this.moreContainer.forEach(function (el, index) {
-				el.classList.add('hide-more-info');
-				el.classList.add('hide');
+				el.classList.add('hide-more-info', 'hide');
 			});
 		},
 		toggleDetail: function toggleDetail(evt) {
-			// console.log(evt.target.firstElementChild);
 			var buttonText = evt.target.firstElementChild;
 			sectionDetails.moreContainer.forEach(function (el) {
 				if (el.dataset.moreInfo === evt.target.id) {
 					if (el.classList.contains('hide')) {
 						buttonText.textContent = 'Minder';
-						console.log('show');
-						el.classList.remove('hide-more-info');
-						setTimeout(function () {
-							el.classList.remove('hide');
-							el.classList.add('show-more-info');
-						}, 300);
+						el.classList.remove('hide-more-info', 'hide');
+						el.classList.add('show-more-info');
 						return;
 					} else {
 						buttonText.textContent = 'Meer';
