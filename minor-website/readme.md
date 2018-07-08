@@ -207,7 +207,18 @@ The to do list for when I have the time to fix it or if someone wants to make a 
 - [ ] Process the feedback from the test (See [usertest](#user-test))
 - [x] Create the Contact page - (The submit will not be working)
 
+# Changes
+Changes for feedback
 
+- Designed and added a form and the contact page
+- Fixed the animation direction from *more info* sections
+- Made the *more info* animation less abrupt
+- Interviewed Bas to verify ideas
+- Tweaked user scenario based on the interview
+- Repositioned quotes
+- Added footer links (e.g. suggestion links) at the end of each page except on the contact page. Based on interview
+- Created a simplefied userflow
+- Made the cursor to a pointer on multiple clickable elements
 
 [current]: https://cmda.github.io/minor-everything-web/
 
