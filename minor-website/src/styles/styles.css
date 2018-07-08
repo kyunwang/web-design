@@ -58,7 +58,8 @@ body {
 	margin: 0;
 }
 
-label {
+label,
+[type='submit'] {
 	cursor: pointer;
 }
 
