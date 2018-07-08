@@ -19,6 +19,8 @@ The content used for this project comes from the current minor website found [HE
 	- [Sketches](#sketches)
 	- [Digital](#digital)
 	- [Principles](#principles)
+- [User interview](#user-interview)
+	- [Bas](#bas)
 - [User test](#user-test)
 	- [Marie](#marie)
 		- [Result](#result)
@@ -149,6 +151,26 @@ Great importance have been given to the headers/titles of each block to allow th
 12. Smart organization reduces cognitive load
 This principle is a by-product of principle 11. The separating of content in own block is how this is implemented.
 
+# User interview
+
+## Bas
+Bas had been searching for a minor to following with a friend of his. They have chosen this minor (Everything web) because they wanted to learn Front-end technology. As Software Engineer students they only learned about the Back-end.
+
+Bas had the opinion that learning Front-end development would increase his worth as developer. Especially because he would be able to create something from start to finish.
+
+Information about the minor was found on *[Kiesopmaat][kiesopmaat]*, from the poster made by the minor and the [minor website][current] at the time.
+
+They almost did not join the minor because of the look of the website. Given them the though "Is this web design?". They did join the minor after reconsidering the course content.
+
+Their school has recommended them to sign up throught the website of [kiesopmaat][kiesopmaat]
+
+
+Notes:
+- Signing up for the minor will not go throught the website
+- The course content e.g. programme is the most important for the potential student
+- The initial impression is important e.g. the look
+- Web development should go hand in hand with web design
+
 # User test
 
 ## Marie
@@ -180,3 +202,4 @@ The to do list for when I have the time to fix it or if someone wants to make a 
 [current]: https://cmda.github.io/minor-everything-web/
 
 [article]: http://bokardo.com/principles-of-user-interface-design/
+[kiesopmaat]: https://www.kiesopmaat.nl/
