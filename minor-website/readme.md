@@ -3,6 +3,8 @@ This repo is for a course from minor Everything Web at HvA.
 
 The content used for this project comes from the current minor website found [HERE][current] (20-04-2018)
 
+Website live **[HERE](https://kyunwang.github.io/web-design/minor-website/dist)**
+
 *The content is in dutch*
 
 # Table of Content
@@ -111,7 +113,9 @@ He might be interested in the minor Everything web to learn more about front-end
 
 ## Sketches
 *A few sketches will be placed here*
+	
 ![](doc/images/design/sketches.jpg)
+
 
 ## Digital
 This is the design made for the minor website, this time with a *desktop first* approach instead of *mobile first*. The goal was to make the content clear and seperate them to induce one primary action per state (block);
@@ -119,7 +123,7 @@ This is the design made for the minor website, this time with a *desktop first* 
 *Note: This is a 'take away' design to follow and there exists some testing in it e.g. the wat the header is presented*
 
 *Design is a subject to change in development (Which did happen in some cases*
-
+	
 **Introduction**
 
 ![](doc/images/design/intro.png)
@@ -135,7 +139,6 @@ This is the design made for the minor website, this time with a *desktop first* 
 **Introduction mobile**
 
 ![](doc/images/design/intro-m.png)
-
 
 ## Principles
 The following principle from this article has been implemented and where/how.
