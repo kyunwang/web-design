@@ -58,7 +58,8 @@ body {
 	margin: 0;
 }
 
-main {
+label {
+	cursor: pointer;
 }
 
 input,
@@ -764,6 +765,8 @@ main {
 	border: none;
 	padding: 0;
 	text-transform: uppercase;
+
+	cursor: pointer;
 	& span {
 		pointer-events: none;
 		font-weight: var(--bold);

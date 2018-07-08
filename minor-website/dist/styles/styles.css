@@ -50,7 +50,8 @@ body {
 	margin: 0;
 }
 
-main {
+label {
+	cursor: pointer;
 }
 
 input,
@@ -388,8 +389,7 @@ main section aside p:not(:first-of-type) {
 	.testimonials__container [type='radio'] + label {
 		flex-basis: 30%;
 	}
-	.testimonials__container [type='radio']:checked + label {
-}
+	.testimonials__container [type='radio']:checked + label {}
 	.testimonials__container blockquote {
 		max-width: 32em;
 		font-size: 1.3rem;
@@ -471,8 +471,7 @@ main section aside p:not(:first-of-type) {
 }
 
 @media all and (min-width: 40em) {
-	.program__container::before {
-}
+	.program__container::before {}
 	.program__container h3 {
 		margin-left: -2rem;
 		font-size: 6rem;
@@ -480,8 +479,7 @@ main section aside p:not(:first-of-type) {
 	.program__container h4 {
 		font-size: 3rem;
 	}
-	.program__container p:first-of-type {
-}
+	.program__container p:first-of-type {}
 	.program__container:nth-of-type(even)::before {
 		left: 48%;
 	}
@@ -491,8 +489,7 @@ main section aside p:not(:first-of-type) {
 	.program__container:nth-of-type(even) ul {
 		padding-left: 20%;
 	}
-	.program__container:last-of-type {
-}
+	.program__container:last-of-type {}
 }
 
 /*==========================
@@ -741,7 +738,9 @@ main section aside p:not(:first-of-type) {
 	background: transparent;
 	border: none;
 	padding: 0;
-	text-transform: uppercase
+	text-transform: uppercase;
+
+	cursor: pointer
 }
 
 .button__more span {
@@ -774,5 +773,4 @@ main section aside p:not(:first-of-type) {
 	color: #000;
 }
 
-.button__more--black span {
-}
+.button__more--black span {}
