@@ -21,6 +21,7 @@ The content used for this project comes from the current minor website found [HE
 	- [Principles](#principles)
 - [User interview](#user-interview)
 	- [Bas](#bas)
+- [Userflow](#userflow)
 - [User test](#user-test)
 	- [Marie](#marie)
 		- [Result](#result)
@@ -170,6 +171,12 @@ Notes:
 - The course content e.g. programme is the most important for the potential student
 - The initial impression is important e.g. the look
 - Web development should go hand in hand with web design
+
+# Userflow
+
+A simplefied userflow of someone looking for an minor would go through.
+
+![](doc/images/minor-userflow.jpg)
 
 # User test
 
