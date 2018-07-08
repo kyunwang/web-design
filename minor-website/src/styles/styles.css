@@ -11,7 +11,7 @@
 	--grey: #a0a0a0;
 	--yellow: #fed631;
 	/*  White spaces */
-	--def-transition: 0.3s ease-in;
+	--def-transition: 0.2s ease-in;
 }
 
 html {
@@ -331,7 +331,7 @@ main {
 		font-weight: var(--bold);
 		margin-bottom: 4rem;
 		width: 100%;
-		min-height: 12rem;
+		min-height: 8rem;
 		overflow-x: auto;
 		&::-webkit-scrollbar {
 			display: none;
